@@ -1,2 +1,2 @@
 # metatron
-This repository contains the source code of MetaTron a manual annotation tool targeting the biomedical domain. It allows for the annotation of relationships, mentions, labels, facts.
+This repository contains all the source code related to Metatron. Metatron is a manual annotation tool designed for biomedical literature. It is a collaborative and fully customizable tool that allows users to perform mentions, relationships, assertions, labels annotations, and concepts linking. 

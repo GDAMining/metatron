@@ -1,0 +1,2640 @@
+{
+    "collection": "test",
+    "annotation_type": "relationships",
+    "relationships": [
+
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26989024",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:03.948Z",
+            "subject_start": 870,
+            "subject_stop": 872,
+            "subject_mention_text": "PKC",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5579",
+                    "concept_name": "PRKCB",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 902,
+            "object_stop": 907,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26989024",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:03.966Z",
+            "subject_start": 870,
+            "subject_stop": 872,
+            "subject_mention_text": "PKC",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5579",
+                    "concept_name": "PRKCB",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 929,
+            "object_stop": 940,
+            "object_mention_text": "colon cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D015179",
+                    "concept_name": "D015179",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26989024",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:03.984Z",
+            "subject_start": 870,
+            "subject_stop": 872,
+            "subject_mention_text": "PKC",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5579",
+                    "concept_name": "PRKCB",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1022,
+            "object_stop": 1027,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26989024",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:04.002Z",
+            "subject_start": 1006,
+            "subject_stop": 1013,
+            "subject_mention_text": "PKC Beta",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5579",
+                    "concept_name": "PRKCB",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 902,
+            "object_stop": 907,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26989024",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:04.020Z",
+            "subject_start": 1006,
+            "subject_stop": 1013,
+            "subject_mention_text": "PKC Beta",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5579",
+                    "concept_name": "PRKCB",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 929,
+            "object_stop": 940,
+            "object_mention_text": "colon cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D015179",
+                    "concept_name": "D015179",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26989024",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:04.038Z",
+            "subject_start": 1006,
+            "subject_stop": 1013,
+            "subject_mention_text": "PKC Beta",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5579",
+                    "concept_name": "PRKCB",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1022,
+            "object_stop": 1027,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_24662820",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:00.721Z",
+            "subject_start": 1105,
+            "subject_stop": 1111,
+            "subject_mention_text": "PRKAR1A",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5573",
+                    "concept_name": "PRKAR1A",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1086,
+            "object_stop": 1098,
+            "object_mention_text": "breast cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_24662820",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:00.739Z",
+            "subject_start": 1105,
+            "subject_stop": 1111,
+            "subject_mention_text": "PRKAR1A",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5573",
+                    "concept_name": "PRKAR1A",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1161,
+            "object_stop": 1173,
+            "object_mention_text": "breast tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_24662820",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:00.757Z",
+            "subject_start": 1118,
+            "subject_stop": 1120,
+            "subject_mention_text": "SRC",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/6714",
+                    "concept_name": "SRC",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1086,
+            "object_stop": 1098,
+            "object_mention_text": "breast cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_24662820",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:00.774Z",
+            "subject_start": 1118,
+            "subject_stop": 1120,
+            "subject_mention_text": "SRC",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/6714",
+                    "concept_name": "SRC",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1161,
+            "object_stop": 1173,
+            "object_mention_text": "breast tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_24662820",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:00.791Z",
+            "subject_start": 1156,
+            "subject_stop": 1159,
+            "subject_mention_text": "HER2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1086,
+            "object_stop": 1098,
+            "object_mention_text": "breast cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_24662820",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:00.814Z",
+            "subject_start": 1156,
+            "subject_stop": 1159,
+            "subject_mention_text": "HER2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1161,
+            "object_stop": 1173,
+            "object_mention_text": "breast tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.347Z",
+            "subject_start": 411,
+            "subject_stop": 459,
+            "subject_mention_text": "Ubiquitin-like with PHD and RING Finger domains 1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/29128",
+                    "concept_name": "UHRF1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 525,
+            "object_stop": 545,
+            "object_mention_text": "haematological tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D019337",
+                    "concept_name": "D019337",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.366Z",
+            "subject_start": 462,
+            "subject_stop": 466,
+            "subject_mention_text": "UHRF1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/29128",
+                    "concept_name": "UHRF1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 525,
+            "object_stop": 545,
+            "object_mention_text": "haematological tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D019337",
+                    "concept_name": "D019337",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.384Z",
+            "subject_start": 645,
+            "subject_stop": 653,
+            "subject_mention_text": "p16 INK4A",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/1029",
+                    "concept_name": "CDKN2A",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 525,
+            "object_stop": 545,
+            "object_mention_text": "haematological tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D019337",
+                    "concept_name": "D019337",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.401Z",
+            "subject_start": 657,
+            "subject_stop": 661,
+            "subject_mention_text": "BRCA1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/672",
+                    "concept_name": "BRCA1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 525,
+            "object_stop": 545,
+            "object_mention_text": "haematological tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D019337",
+                    "concept_name": "D019337",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.418Z",
+            "subject_start": 664,
+            "subject_stop": 668,
+            "subject_mention_text": "PPARG",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5468",
+                    "concept_name": "PPARG",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 525,
+            "object_stop": 545,
+            "object_mention_text": "haematological tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D019337",
+                    "concept_name": "D019337",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.436Z",
+            "subject_start": 674,
+            "subject_stop": 678,
+            "subject_mention_text": "KiSS1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/3814",
+                    "concept_name": "KISS1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 525,
+            "object_stop": 545,
+            "object_mention_text": "haematological tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D019337",
+                    "concept_name": "D019337",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.450Z",
+            "subject_start": 1274,
+            "subject_stop": 1278,
+            "subject_mention_text": "UHRF1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/29128",
+                    "concept_name": "UHRF1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1385,
+            "object_stop": 1390,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.465Z",
+            "subject_start": 1353,
+            "subject_stop": 1357,
+            "subject_mention_text": "UHRF1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/29128",
+                    "concept_name": "UHRF1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1385,
+            "object_stop": 1390,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_27839516",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:12:26.482Z",
+            "subject_start": 1461,
+            "subject_stop": 1465,
+            "subject_mention_text": "UHRF1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/29128",
+                    "concept_name": "UHRF1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1481,
+            "object_stop": 1486,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_14516936",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:08:44.708Z",
+            "subject_start": 466,
+            "subject_stop": 470,
+            "subject_mention_text": "BRCA1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/672",
+                    "concept_name": "BRCA1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 537,
+            "object_stop": 571,
+            "object_mention_text": "sporadic breast and ovarian cancers",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_14516936",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:08:44.742Z",
+            "subject_start": 466,
+            "subject_stop": 470,
+            "subject_mention_text": "BRCA1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/672",
+                    "concept_name": "BRCA1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 607,
+            "object_stop": 611,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_19444644",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:19.212Z",
+            "subject_start": 278,
+            "subject_stop": 282,
+            "subject_mention_text": "HER-2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 396,
+            "object_stop": 423,
+            "object_mention_text": "metastasis of adenocarcinoma",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009362",
+                    "concept_name": "D009362",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_19444644",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:19.229Z",
+            "subject_start": 278,
+            "subject_stop": 282,
+            "subject_mention_text": "HER-2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 466,
+            "object_stop": 479,
+            "object_mention_text": "breast cancers",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_19444644",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:19.245Z",
+            "subject_start": 312,
+            "subject_stop": 319,
+            "subject_mention_text": "c-erbB-2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 396,
+            "object_stop": 423,
+            "object_mention_text": "metastasis of adenocarcinoma",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009362",
+                    "concept_name": "D009362",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_19444644",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:19.262Z",
+            "subject_start": 312,
+            "subject_stop": 319,
+            "subject_mention_text": "c-erbB-2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 466,
+            "object_stop": 479,
+            "object_mention_text": "breast cancers",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_19444644",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:19.279Z",
+            "subject_start": 321,
+            "subject_stop": 323,
+            "subject_mention_text": "neu",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 396,
+            "object_stop": 423,
+            "object_mention_text": "metastasis of adenocarcinoma",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009362",
+                    "concept_name": "D009362",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_19444644",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:19.296Z",
+            "subject_start": 321,
+            "subject_stop": 323,
+            "subject_mention_text": "neu",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 466,
+            "object_stop": 479,
+            "object_mention_text": "breast cancers",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_31704862",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:15:12.231Z",
+            "subject_start": 975,
+            "subject_stop": 979,
+            "subject_mention_text": "GALNS",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2588",
+                    "concept_name": "GALNS",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 997,
+            "object_stop": 1002,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_31704862",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:15:12.251Z",
+            "subject_start": 985,
+            "subject_stop": 988,
+            "subject_mention_text": "PAEP",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5047",
+                    "concept_name": "PAEP",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 997,
+            "object_stop": 1002,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_31704862",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:15:12.270Z",
+            "subject_start": 1182,
+            "subject_stop": 1185,
+            "subject_mention_text": "PAEP",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5047",
+                    "concept_name": "PAEP",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1146,
+            "object_stop": 1152,
+            "object_mention_text": "cancers",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_31704862",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:15:12.291Z",
+            "subject_start": 1182,
+            "subject_stop": 1185,
+            "subject_mention_text": "PAEP",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5047",
+                    "concept_name": "PAEP",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1238,
+            "object_stop": 1248,
+            "object_mention_text": "neck cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D006258",
+                    "concept_name": "D006258",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_31069148",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:14:50.915Z",
+            "subject_start": 1066,
+            "subject_stop": 1072,
+            "subject_mention_text": "ALDH7A1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/501",
+                    "concept_name": "ALDH7A1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1136,
+            "object_stop": 1140,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30858172",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-06T18:35:20.105Z",
+            "subject_start": 793,
+            "subject_stop": 795,
+            "subject_mention_text": "APJ",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/187",
+                    "concept_name": "APLNR",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 830,
+            "object_stop": 834,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30858172",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-06T18:35:20.123Z",
+            "subject_start": 793,
+            "subject_stop": 795,
+            "subject_mention_text": "APJ",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/187",
+                    "concept_name": "APLNR",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 904,
+            "object_stop": 909,
+            "object_mention_text": "tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30858172",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-06T18:35:20.140Z",
+            "subject_start": 1122,
+            "subject_stop": 1124,
+            "subject_mention_text": "APJ",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/187",
+                    "concept_name": "APLNR",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1140,
+            "object_stop": 1145,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30858172",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-06T18:35:20.157Z",
+            "subject_start": 1427,
+            "subject_stop": 1429,
+            "subject_mention_text": "APJ",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/187",
+                    "concept_name": "APLNR",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1072,
+            "object_stop": 1085,
+            "object_mention_text": "ovarian cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D010051",
+                    "concept_name": "D010051",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30858172",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-06T18:35:20.175Z",
+            "subject_start": 1427,
+            "subject_stop": 1429,
+            "subject_mention_text": "APJ",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/187",
+                    "concept_name": "APLNR",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1140,
+            "object_stop": 1145,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30858172",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-06T18:35:20.193Z",
+            "subject_start": 1467,
+            "subject_stop": 1469,
+            "subject_mention_text": "APJ",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/187",
+                    "concept_name": "APLNR",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1486,
+            "object_stop": 1513,
+            "object_mention_text": "metastasis of ovarian cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009362",
+                    "concept_name": "D009362",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30075157",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:54.320Z",
+            "subject_start": 1313,
+            "subject_stop": 1317,
+            "subject_mention_text": "TTF-1",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/7270",
+                    "concept_name": "TTF1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1406,
+            "object_stop": 1411,
+            "object_mention_text": "tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_30075157",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:54.339Z",
+            "subject_start": 1323,
+            "subject_stop": 1335,
+            "subject_mention_text": "thyroglobulin",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/7038",
+                    "concept_name": "TG",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1406,
+            "object_stop": 1411,
+            "object_mention_text": "tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29992839",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:31.254Z",
+            "subject_start": 819,
+            "subject_stop": 823,
+            "subject_mention_text": "ERdj3",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/67838",
+                    "concept_name": "Dnajb11",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 843,
+            "object_stop": 845,
+            "object_mention_text": "HCC",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D006528",
+                    "concept_name": "D006528",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29992839",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:31.270Z",
+            "subject_start": 876,
+            "subject_stop": 880,
+            "subject_mention_text": "ERdj3",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/67838",
+                    "concept_name": "Dnajb11",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 940,
+            "object_stop": 942,
+            "object_mention_text": "HCC",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D006528",
+                    "concept_name": "D006528",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29992839",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:31.287Z",
+            "subject_start": 1031,
+            "subject_stop": 1035,
+            "subject_mention_text": "ERdj3",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/67838",
+                    "concept_name": "Dnajb11",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1167,
+            "object_stop": 1171,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.761Z",
+            "subject_start": 928,
+            "subject_stop": 932,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/10253",
+                    "concept_name": "SPRY2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 965,
+            "object_stop": 967,
+            "object_mention_text": "GBM",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D005909",
+                    "concept_name": "D005909",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.778Z",
+            "subject_start": 928,
+            "subject_stop": 932,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/10253",
+                    "concept_name": "SPRY2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1012,
+            "object_stop": 1014,
+            "object_mention_text": "GBM",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D005909",
+                    "concept_name": "D005909",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.795Z",
+            "subject_start": 1026,
+            "subject_stop": 1030,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/10253",
+                    "concept_name": "SPRY2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1082,
+            "object_stop": 1084,
+            "object_mention_text": "GBM",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D005909",
+                    "concept_name": "D005909",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.812Z",
+            "subject_start": 1408,
+            "subject_stop": 1412,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/24064",
+                    "concept_name": "Spry2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1442,
+            "object_stop": 1459,
+            "object_mention_text": "intracranial tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001932",
+                    "concept_name": "D001932",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.830Z",
+            "subject_start": 1556,
+            "subject_stop": 1560,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/10253",
+                    "concept_name": "SPRY2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1586,
+            "object_stop": 1590,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.847Z",
+            "subject_start": 1702,
+            "subject_stop": 1706,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/10253",
+                    "concept_name": "SPRY2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1924,
+            "object_stop": 1926,
+            "object_mention_text": "GBM",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D005909",
+                    "concept_name": "D005909",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.865Z",
+            "subject_start": 1760,
+            "subject_stop": 1762,
+            "subject_mention_text": "ERK",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/5594",
+                    "concept_name": "MAPK1",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1924,
+            "object_stop": 1926,
+            "object_mention_text": "GBM",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D005909",
+                    "concept_name": "D005909",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_29635363",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:13:03.881Z",
+            "subject_start": 1877,
+            "subject_stop": 1881,
+            "subject_mention_text": "SPRY2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/10253",
+                    "concept_name": "SPRY2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1924,
+            "object_stop": 1926,
+            "object_mention_text": "GBM",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D005909",
+                    "concept_name": "D005909",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+
+
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26717044",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:37.813Z",
+            "subject_start": 680,
+            "subject_stop": 682,
+            "subject_mention_text": "miR",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/220972",
+                    "concept_name": "MARCHF8",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 702,
+            "object_stop": 707,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26717044",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:37.832Z",
+            "subject_start": 911,
+            "subject_stop": 917,
+            "subject_mention_text": "MAP3K11",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/4296",
+                    "concept_name": "MAP3K11",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 959,
+            "object_stop": 964,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26717044",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:37.851Z",
+            "subject_start": 1761,
+            "subject_stop": 1767,
+            "subject_mention_text": "MAP3K11",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/4296",
+                    "concept_name": "MAP3K11",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1629,
+            "object_stop": 1633,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26717044",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:37.869Z",
+            "subject_start": 1761,
+            "subject_stop": 1767,
+            "subject_mention_text": "MAP3K11",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/4296",
+                    "concept_name": "MAP3K11",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1660,
+            "object_stop": 1665,
+            "object_mention_text": "cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.333Z",
+            "subject_start": 483,
+            "subject_stop": 488,
+            "subject_mention_text": "CSNK1D",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/1453",
+                    "concept_name": "CSNK1D",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 533,
+            "object_stop": 545,
+            "object_mention_text": "breast tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.352Z",
+            "subject_start": 483,
+            "subject_stop": 488,
+            "subject_mention_text": "CSNK1D",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/1453",
+                    "concept_name": "CSNK1D",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 616,
+            "object_stop": 628,
+            "object_mention_text": "breast cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.407Z",
+            "subject_start": 999,
+            "subject_stop": 1032,
+            "subject_mention_text": "epidermal growth factor receptor 2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 824,
+            "object_stop": 835,
+            "object_mention_text": "breast tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.425Z",
+            "subject_start": 999,
+            "subject_stop": 1032,
+            "subject_mention_text": "epidermal growth factor receptor 2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 852,
+            "object_stop": 856,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.443Z",
+            "subject_start": 999,
+            "subject_stop": 1032,
+            "subject_mention_text": "epidermal growth factor receptor 2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 909,
+            "object_stop": 921,
+            "object_mention_text": "breast cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.460Z",
+            "subject_start": 999,
+            "subject_stop": 1032,
+            "subject_mention_text": "epidermal growth factor receptor 2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 966,
+            "object_stop": 970,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_26676609",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:10:23.477Z",
+            "subject_start": 1044,
+            "subject_stop": 1047,
+            "subject_mention_text": "HER2",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+                    "concept_name": "ERBB2",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 824,
+            "object_stop": 835,
+            "object_mention_text": "breast tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001943",
+                    "concept_name": "D001943",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+
+
+        {
+            "username": "ornella",
+            "document_id": "pubmed_21170045",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:35.414Z",
+            "subject_start": 1132,
+            "subject_stop": 1134,
+            "subject_mention_text": "Hdc",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/15186",
+                    "concept_name": "Hdc",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1173,
+            "object_stop": 1177,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_21170045",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:35.432Z",
+            "subject_start": 1132,
+            "subject_stop": 1134,
+            "subject_mention_text": "Hdc",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/15186",
+                    "concept_name": "Hdc",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D016147",
+                    "concept_name": "Tumor Suppressor Gene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1210,
+            "object_stop": 1221,
+            "object_mention_text": "colon cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D015179",
+                    "concept_name": "D015179",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_21170045",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:35.465Z",
+            "subject_start": 1242,
+            "subject_stop": 1244,
+            "subject_mention_text": "Hdc",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/15186",
+                    "concept_name": "Hdc",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1173,
+            "object_stop": 1177,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_21170045",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:09:35.483Z",
+            "subject_start": 1242,
+            "subject_stop": 1244,
+            "subject_mention_text": "Hdc",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/15186",
+                    "concept_name": "Hdc",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009857",
+                    "concept_name": "Oncogene",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1210,
+            "object_stop": 1221,
+            "object_mention_text": "colon cancer",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D015179",
+                    "concept_name": "D015179",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_1317500",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:08:16.463Z",
+            "subject_start": 827,
+            "subject_stop": 834,
+            "subject_mention_text": "Vimentin",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/7431",
+                    "concept_name": "VIM",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 906,
+            "object_stop": 910,
+            "object_mention_text": "tumor",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D009369",
+                    "concept_name": "D009369",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_1317500",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:08:16.505Z",
+            "subject_start": 1304,
+            "subject_stop": 1311,
+            "subject_mention_text": "Vimentin",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/7431",
+                    "concept_name": "VIM",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1340,
+            "object_stop": 1351,
+            "object_mention_text": "brain tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001932",
+                    "concept_name": "D001932",
+                    "concept_area": "Disease"
+                }
+            ]
+        },
+        {
+            "username": "ornella",
+            "document_id": "pubmed_1317500",
+            "batch": 1,
+            "collection_name": "test",
+            "insertion_time": "2023-04-03T11:08:16.524Z",
+            "subject_start": 1317,
+            "subject_stop": 1319,
+            "subject_mention_text": "MYC",
+            "subject_concepts": [
+                {
+                    "concept_url": "https://www.ncbi.nlm.nih.gov/gene/4609",
+                    "concept_name": "MYC",
+                    "concept_area": "Gene"
+                }
+            ],
+            "predicate_start": null,
+            "predicate_stop": null,
+            "predicate_mention_text": null,
+            "predicate_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D014408",
+                    "concept_name": "Biomarker",
+                    "concept_area": "GCA"
+                }
+            ],
+            "object_start": 1340,
+            "object_stop": 1351,
+            "object_mention_text": "brain tumors",
+            "object_concepts": [
+                {
+                    "concept_url": "https://id.nlm.nih.gov/mesh/D001932",
+                    "concept_name": "D001932",
+                    "concept_area": "Disease"
+                }
+            ]
+        }
+    ]
+}

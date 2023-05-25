@@ -1,0 +1,355 @@
+import {Col, Row} from "react-bootstrap";
+import Button from "@mui/material/Button";
+import Draggable from 'react-draggable';
+
+import axios from "axios";
+import {ButtonGroup} from "@material-ui/core";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from '@mui/material/TextField';
+import React, {useState, useEffect, useContext, createContext, useRef} from "react";
+import Badge from 'react-bootstrap/Badge'
+import SaveIcon from '@mui/icons-material/Save';
+import HubIcon from '@mui/icons-material/Hub';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+import EditIcon from '@mui/icons-material/Edit';
+const checkedIcon = <CheckBoxIcon fontSize="small" />;
+import Divider from '@mui/material/Divider';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import '../annotation.css'
+
+import Fade from '@mui/material/Fade';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faChevronLeft, faPalette,
+    faChevronRight, faExclamationTriangle,
+    faGlasses,
+    faInfoCircle,
+    faList, faPlusCircle,
+    faProjectDiagram, faArrowLeft, faArrowRight, faTrash, faSave, faFileInvoice
+} from "@fortawesome/free-solid-svg-icons";
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import DocumentToolBar from "../../Document/ToolBar/DocumentToolBar";
+import ToolBar from "../../BaseComponents/ToolBar";
+import AddIcon from '@mui/icons-material/Add';
+import Collapse from "@material-ui/core/Collapse";
+import Paper from "@mui/material/Paper";
+import '../annotation.css'
+// import './documents.css'
+import {CircularProgress} from "@mui/material";
+import {AppContext} from "../../../App";
+import DeleteIcon from '@mui/icons-material/Delete';
+import InfoIcon from '@mui/icons-material/Info';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
+import {alpha, createTheme, styled, ThemeProvider} from "@mui/material/styles";
+import DraggableModal from "./DraggableConceptModal";
+import {DeleteRange, updateMentionColor, waitForElm} from "../../HelperFunctions/HelperFunctions";
+import DeleteMentionModal from "../mentions/modals/DeleteMentionModal";
+import AssistantIcon from '@mui/icons-material/Assistant';
+import CheckIcon from '@mui/icons-material/Check';
+import Chip from "@mui/material/Chip";
+import IconButton from '@mui/material/IconButton';
+
+import {type} from "@testing-library/user-event/dist/type";
+import Tooltip from '@mui/material/Tooltip';
+
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import ChipRel from "../relationship/ChipRelationship";
+import DescriptionDialog from "./DescriptionDialog";
+
+
+
+export default function Concept(props){
+    const { username,concepts,inarel,documentdescription,areascolors,curannotator,mentions,relationshipslist,mentiontohighlight,startrange,endrange } = useContext(AppContext);
+    const [RelationshipsList,SetRelationshipsList] = relationshipslist
+
+    const [ConceptsList,SetConceptsList] = concepts
+    const [ShowDelete,SetShowDelete] = useState(false)
+    const [ShowDescription,SetShowDescription] = useState(false)
+    const [ShowMultiple,SetShowMultiple] = useState(false)
+    const [MentionsList,SetMentionsList] = mentions
+    const [InARel,SetInARel] = inarel
+    const [CurAnnotator,SetCurAnnotator] = curannotator
+    const [Username,SetUsername] = username
+    const [AreasColors,SetAreasColors] = areascolors
+    const Colors = ['red','orange','green','blue','purple','pink','black']
+    const [Color,SetColor] = useState('rgba(65,105,225,1)')
+    const [ColorOver,SetColorOver] = useState('rgba(65,105,225,0.7)')
+    const [DocumentDesc,SetDocumentDesc] = documentdescription
+
+    // const updateMentionColor = (mentions_classes,start,stop,concepts) => {
+    //     // console.log('eccomi')
+    //     let concepts_mention = concepts.filter(x=>x.start === start && x.stop === stop)
+    //     waitForElm('.'+mentions_classes).then((mention) => {
+    //
+    //     // waitForElm('#'+props.mention_id).then((mention) => {
+    //         console.log('props',mention)
+    //         if(concepts_mention.length === 0){
+    //             mention.style.color = 'rgb(65,105,225)'
+    //             mention.style.backgroundColor = 'rgba(65,105,225,0.1)';
+    //
+    //         }
+    //         else if(concepts_mention.length === 1){
+    //             let area = concepts_mention[0]['concept']['area']
+    //             let color_0 = AreasColors[area]
+    //
+    //                 mention.style.color = color_0
+    //                 mention.style.backgroundColor = color_0.replace('1)','0.1)')
+    //
+    //         }
+    //     })
+    // }
+
+    const handleDelete = (event,i) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        axios.delete('concepts/delete',{data:{mention:props.mention,url:props.concepts[i]['concept'].concept_url,area:props.concepts[i]['concept'].area}})
+            .then(response=>{
+                // props.setconcepts(false)
+                let concepts = []
+                ConceptsList.map(c=>{
+                    if (!(c['concept']['concept_url'] === props.concepts[i]['concept'].concept_url && props.concepts[i].start === c.start && props.concepts[i].stop === c.stop)){
+                        concepts.push(c)
+                    }
+                })
+                if (i === 0){
+                    SetShowDelete(false)
+
+                }
+                SetConceptsList(concepts)
+                SetRelationshipsList(response.data['relationships'])
+                // updateMentionColor(props.mention.mentions, props.mention.start, props.mention.stop, concepts,AreasColors)
+                // console.log('cocnepts',concepts)
+
+
+            })
+            .catch(error=>{
+                console.log('error',error)
+            })
+
+    }
+
+    useEffect(()=>{
+        // console.log('color update')
+        // if(!InARel){
+            if(props.concepts.length===1){
+                let area = props.concepts[0]['concept']['area']
+                let color_0 = window.localStorage.getItem(area)
+
+                if(color_0 === null) {
+                    color_0 = 'rgba(65,105,225,1)'
+                    window.localStorage.setItem(area, color_0)
+                }
+
+                // waitForElm('#'+props.mention_id).then((mention) => {
+                //     mention.style.color = color_0
+                //     mention.style.backgroundColor = color_0.replace('1)','0.1)')
+                // })
+                let color_1 = color_0.replace('1)', '0.7)')
+
+                SetColor(color_0)
+                SetColorOver(color_1)
+            }
+            else if(props.concepts.length > 1){
+                let color_0 = 'rgba(50,50,50,1)'
+                // waitForElm('#'+props.mention_id).then((mention) => {
+                //     mention.style.color = color_0
+                //     mention.style.backgroundColor = color_0.replace('1)','0.1)')
+                // })
+                let color_1 = color_0.replace('1)', '0.7)')
+
+                SetColor(color_0)
+                SetColorOver(color_1)
+            }
+        // }
+
+
+    },[AreasColors,props.concepts])
+
+
+    const CustomChip = styled(Chip)({
+        fontSize:12,
+        height:22,
+        maxWidth:200,
+        backgroundColor: Color,
+        color:'white',
+        "&:hover": {
+            backgroundColor: ColorOver,
+            color:'white',
+            "& .MuiChip-deleteIcon": {
+                height:20,
+                color:'white',
+                backgroundColor: ColorOver,
+            },
+        },
+        "& .MuiChip-deleteIcon": {
+            height:20,
+            color:'white',
+            backgroundColor: Color,
+        },
+    });
+
+
+
+    return (
+        <div>
+            {/*sx={{height:'15px',fontSize:'0.6rem'}}*/}
+            {((props.concepts && props.concepts.length === 1 && Color && ColorOver && !InARel)) &&
+            // <div className='concepts' >
+                <div style={{textAlign:'center'}}>
+
+                    {CurAnnotator === Username ?<CustomChip label={props.concepts[0]['concept'].concept_name}
+                            onDelete={()=>SetShowDelete(prev=>!prev)} onClick={()=>SetShowDescription(prev=>!prev)}  /> :
+                    <CustomChip label={props.concepts[0]['concept'].concept_name}
+                                 onClick={()=>SetShowDescription(prev=>!prev)}  />}
+            </div>}
+            {props.concepts && props.concepts.length > 1 &&  Color && ColorOver && !InARel &&
+            <div style={{textAlign:'center'}}>
+                <CustomChip label={props.concepts.length} color="primary" onClick={()=>SetShowMultiple(prev=>!prev)}
+                       />
+            </div>}
+            {((props.concepts && props.concepts.length === 1 && Color && ColorOver && InARel)) &&
+            // <div className='concepts' >
+            <div style={{textAlign:'center'}}>
+
+                <ChipRel role={props.role} variant = {(props.role.toLowerCase() === 'source' || props.role.toLowerCase() === 'predicate' || props.role.toLowerCase() === 'target') ? "filled":"outlined"} color={Color} label={props.concepts[0]['concept'].concept_name} />
+            </div>}
+            {props.concepts && props.concepts.length > 1 &&  Color && ColorOver && InARel &&
+            <div className='concepts'>
+                <ChipRel role={props.role} variant = {(props.role.toLowerCase() === 'source' || props.role.toLowerCase() === 'predicate' || props.role.toLowerCase() === 'target') ? "filled":"outlined"} color={Color} label={props.concepts.length}  />
+            </div>}
+
+
+            {ShowDescription && <DescriptionDialog show={ShowDescription} setshow={SetShowDescription} area={props.concepts[0]['concept']['area']}  name={props.concepts[0]['concept']['concept_name']} url={props.concepts[0]['concept']['concept_url']} description={props.concepts[0]['concept']['concept_description']} />
+            // <Dialog
+            //     open={props.show}
+            //     onClose={()=>props.setshow(false)}
+            //     aria-labelledby="alert-dialog-title"
+            //     aria-describedby="alert-dialog-description"
+            //     maxWidth={'sm'}
+            //     fullWidth={'sm'}
+            // >
+            //     <DialogTitle id="alert-dialog-title">
+            //         <h2><i>{props.area}</i>: {props.name}</h2>
+            //     </DialogTitle>
+            //     <DialogContent>
+            //         <DialogContentText id="alert-dialog-description">
+            //             <div>
+            //
+            //                 <div style={{marginBottom:'3%'}}>
+            //                     <a href={props.url} > {props.url}</a>
+            //                 </div>
+            //                 {/*<b>Name</b>*/}
+            //                 {/*<div style={{marginBottom:'3%'}}>*/}
+            //                 {/*    {props.concepts[0]['concept'].concept_name}*/}
+            //                 {/*</div>*/}
+            //                 {/*<b>Description</b>*/}
+            //                 <div style={{marginBottom:'3%'}}>
+            //                     {props.description}
+            //                 </div>
+            //                 {/*<b>Concept Type</b>*/}
+            //                 {/*<div style={{marginBottom:'3%'}}>*/}
+            //                 {/*    {props.concepts[0]['concept'].area}*/}
+            //                 {/*</div>*/}
+            //
+            //
+            //             </div>
+            //
+            //         </DialogContentText>
+            //     </DialogContent>
+            //     <DialogActions>
+            //         <Button onClick={()=> {
+            //             SetShowDescription(false)
+            //         }}>Close</Button>
+            //
+            //     </DialogActions>
+            // </Dialog>
+
+
+
+            }
+
+            {ShowDelete &&
+            <Dialog
+                open={ShowDelete}
+                onClose={()=>SetShowDelete(false)}
+
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    Delete concept
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Are you sure you want to delete the concept <b>{props.concepts[0]['concept'].concept_name}</b>?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={()=> {
+                        SetShowDelete(false);
+                    }}>No</Button>
+                    <Button onClick={(e)=>handleDelete(e,0)} autoFocus>
+                        Yes
+                    </Button>
+                </DialogActions>
+            </Dialog>
+            }
+
+
+            {ShowMultiple &&
+            <Dialog
+                open={ShowMultiple}
+                onClose={()=>SetShowMultiple(false)}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                maxWidth={'sm'}
+                fullWidth={'sm'}
+            >
+
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        {props.concepts.map((c,i)=><div>
+                            <h4 style={{display:"inline"}}><i>{c['concept'].area}</i>: {c['concept'].concept_name}</h4>
+                            <Tooltip title="Delete concept">
+                            <span style={{display:"inline", float:'right'}}>
+                                <IconButton aria-label="delete" color = 'error' onClick={(e)=>handleDelete(e,i)}>
+                              <DeleteIcon />
+                            </IconButton>
+
+                            </span></Tooltip>
+                            <div>
+                                <div style={{marginBottom:'3%'}}>
+                                    <a href={c['concept'].concept_url} > {c['concept'].concept_url}</a>
+                                </div>
+                                <div style={{marginBottom:'3%'}}>
+                                    {c['concept'].concept_description}
+                                </div><hr/>
+                            </div>
+
+                        </div>)}
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={()=> {SetShowMultiple(false);}}>
+                        Close
+                    </Button>
+                    {/*<Button onClick={(e)=>{handleDelete(e)}} autoFocus>*/}
+                    {/*    Agree*/}
+                    {/*</Button>*/}
+                </DialogActions>
+            </Dialog>
+            }
+        </div>
+
+    )
+}

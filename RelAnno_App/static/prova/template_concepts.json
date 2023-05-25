@@ -1,0 +1,18 @@
+{
+  "concepts": [
+
+    {
+      "concept_url": "concetto22_disease.com",
+      "concept_name": "concetto22 disease",
+      "concept_area": "Disease",
+      "concept_description": "desc"
+    },
+    {
+      "concept_url": "concetto2_disease.com",
+      "concept_name": "concetto2_disease",
+      "concept_area": "Disease",
+      "concept_description": "desc"
+
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.inline{
+    display: inline-block;
+    margin-left:2vw;
+}
+.inline_1vw{
+    display: inline-block;
+
+    margin-left: 1vw;
+}
+.icon-menu{
+    width:30px
+}
+.exit{
+    display: inline-block;
+    color:black !important;
+}

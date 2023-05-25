@@ -1,0 +1,70 @@
+.body_doc{
+    text-align: left;
+}
+.title_doc{
+     text-align: center;
+ }
+
+/*.paper_doc{*/
+/*    cursor: default !important;*/
+/*}*/
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: royalblue;
+}
+
+::selection {
+    color: white;
+    background: royalblue;
+}
+
+.selected {
+    color: white;
+    background: royalblue;
+}
+
+/*span[class^='mention'], span[class*=' mention']{*/
+/*    !*color: orange;*!*/
+/*    !*background: deeppink;*!*/
+/*    display: inline-block;*/
+/*    line-height:1.5;*/
+/*    !*cursor: pointer !important;*!*/
+/*}*/
+.tab{
+    padding-left:3%;
+    padding-right:3%;
+
+}
+/*#paper_doc{*/
+/*    padding-bottom:2.5%;*/
+/*    !*line-height: 2;*!*/
+/*    !*font-size: 1.2rem;*!*/
+/*    position:relative;*/
+/*}*/
+/*.tab_value{*/
+/*    padding-bottom:2.5%;*/
+/*    line-height: 2;*/
+/*    font-size: 1.2rem;*/
+/*}*/
+p{
+    margin:0 !important;
+    line-height: 3.5;
+}
+
+.unselect{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*.no_men{*/
+/*    display: inline-block;*/
+/*    float: left;*/
+/*}*/
+
+/*.no_mention{*/
+/*    display: inline-block;*/
+/*}*/

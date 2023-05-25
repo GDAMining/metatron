@@ -1,0 +1,52 @@
+.container-stats{
+    margin:0 2% 0 2%;
+}
+
+#card{
+    margin: 0 20px 0 20px;
+    float:left;
+ }
+#radial-container.normal{
+    width: 100%;
+    float:left;
+}
+#radial-container.active{
+    width: 30%;
+    float:left;
+}
+.subcontainer{
+    padding: 2%;
+    display:flex;
+    width:100%;
+    justify-content:center;
+
+}
+.navbar{
+    display:flex;
+    justify-content: flex-end;
+}
+.centerpie{
+    display: flex;
+    justify-content: center;
+}
+.btnclass:hover{
+    color:royalblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.btnclass{
+    color:royalblue;
+    text-decoration: underline;
+}
+.fixedsquare{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:50vh
+}
+.centerbars{
+    /*display: flex;*/
+    justify-content: center;
+}
+.fixedsquare::-webkit-scrollbar {
+    width: 8px;
+}

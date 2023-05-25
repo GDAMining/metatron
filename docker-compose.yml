@@ -1,0 +1,39 @@
+version: "3"
+   
+services:
+  gro:
+    image: grobid/grobid:0.7.0
+    ports:
+      - 8073:8070
+
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: '4G'
+
+
+  db:
+    image: postgres
+    volumes:
+      - ./metatron_backup.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data/db:/var/lib/postgresql/data
+
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres 
+
+
+      
+  web:
+    build: .
+
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; python manage.py migrate && python manage.py runserver 0.0.0.0:8000'
+
+    depends_on:
+      - gro
+      - db

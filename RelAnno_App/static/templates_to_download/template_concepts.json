@@ -1,0 +1,24 @@
+{
+  "concepts": [
+    {
+      "concept_url": "insert here the URL or the ID of a concept",
+      "concept_name": "Insert here the name of the concept",
+      "concept_area": "Insert here the semantic area of the concept",
+      "concept_description": "Insert here the description of the concept"
+
+    },
+    {
+      "concept_url": "insert here the URL or the ID of a concept",
+      "concept_name": "Insert here the name of the concept",
+      "concept_area": "Insert here the semantic area of the concept",
+      "concept_description": "Insert here the description of the concept"
+    },
+    {
+      "concept_url": "insert here the URL or the ID of a concept",
+      "concept_name": "Insert here the name of the concept",
+      "concept_area": "Insert here the semantic area of the concept",
+      "concept_description": "Insert here the description of the concept"
+
+    }
+  ]
+}

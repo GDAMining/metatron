@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Effective biomedical document classification for identifying publications relevant to the mouse Gene Expression Database (GXD)</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Oxford University Press (OUP)</publisher>
+				<availability status="unknown"><p>Copyright Oxford University Press (OUP)</p>
+				</availability>
+				<date type="published" when="2023-05-17">17 May 2023</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Xiangying</forename><surname>Jiang</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer and Information Sciences</orgName>
+								<orgName type="institution">University of Delaware</orgName>
+								<address>
+									<addrLine>101 Smith Hall</addrLine>
+									<settlement>Newark</settlement>
+									<region>DE</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Martin</forename><surname>Ringwald</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer and Information Sciences</orgName>
+								<address>
+									<addrLine>The Jackson Laboratory, 600 Main Street, Bar Harbor</addrLine>
+									<region>ME</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Judith</forename><surname>Blake</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="department">Department of Computer and Information Sciences</orgName>
+								<address>
+									<addrLine>The Jackson Laboratory, 600 Main Street, Bar Harbor</addrLine>
+									<region>ME</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author role="corresp">
+							<persName><forename type="first">Hagit</forename><surname>Shatkay</surname></persName>
+							<email>shatkay@udel.edu</email>
+							<affiliation key="aff0">
+								<orgName type="department">Department of Computer and Information Sciences</orgName>
+								<orgName type="institution">University of Delaware</orgName>
+								<address>
+									<addrLine>101 Smith Hall</addrLine>
+									<settlement>Newark</settlement>
+									<region>DE</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<address>
+									<addrLine>2017, 1-9</addrLine>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Effective biomedical document classification for identifying publications relevant to the mouse Gene Expression Database (GXD)</title>
+					</analytic>
+					<monogr>
+						<title level="j" type="main">Database</title>
+						<idno type="eISSN">1758-0463</idno>
+						<imprint>
+							<publisher>Oxford University Press (OUP)</publisher>
+							<biblScope unit="volume">2017</biblScope>
+							<date type="published" when="2023-05-17">17 May 2023</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A61C6136EDD052635D91CAD459698E36</idno>
+					<idno type="DOI">10.1093/database/bax017</idno>
+					<idno type="PMID">28365740</idno>
+					<idno type="PMCID">PMC5467553</idno>
+					<ptr type="open-access" target="https://academic.oup.com/database/article-pdf/doi/10.1093/database/bax017/19231525/bax017.pdf" />
+					<note type="submission">Received 1 November 2016; Revised 16 January 2017; Accepted 13 February 2017</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.7.1-SNAPSHOT" ident="GROBID" when="2023-05-25T09:49+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>The Gene Expression Database (GXD) is a comprehensive online database within the Mouse Genome Informatics resource, aiming to provide available information about endogenous gene expression during mouse development. The information stems primarily from many thousands of biomedical publications that database curators must go through and read. Given the very large number of biomedical papers published each year, automatic document classification plays an important role in biomedical research. Specifically, an effective and efficient document classifier is needed for supporting the GXD annotation workflow. We present here an effective yet relatively simple classification scheme, which uses readily available tools while employing feature selection, aiming to assist curators in identifying publications relevant to GXD. We examine the performance of our method over a large manually curated dataset, consisting of more than 25 000 PubMed abstracts, of which about half are curated as relevant to GXD while the other half as irrelevant to GXD. In addition to text from title-and-abstract, we also consider image captions, an important information source that we integrate into our method. We apply a captions-based classifier to a subset of about 3300 documents, for which the full text of the curated articles is available. The results demonstrate that our proposed approach is robust and effectively addresses the GXD document classification. Moreover, using information obtained from image captions clearly improves performance, compared to title and abstract alone, affirming the utility of image captions as a substantial evidence source for automatically determining the relevance of biomedical publications to a specific subject area.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head><p>Automatically collecting and searching biomedical publications plays an important role in biomedical research, because much information is conveyed in the form of publications. However, since the number of biomedical publications has grown rapidly over the past few decades <ref type="bibr" target="#b0">(1)</ref>, it becomes impractical for researchers to quickly find all and only those biomedical publications that are related to their needs. One way to address this challenge is through automatic categorization of large amounts of publications by relevance to a topic, which can potentially save considerable time and resources. As such, automated biomedical document classification, aiming to identify publications relevant to a specific research field, is an important task that has attracted much interest <ref type="bibr" target="#b1">(2)</ref><ref type="bibr" target="#b2">(3)</ref><ref type="bibr" target="#b3">(4)</ref><ref type="bibr" target="#b4">(5)</ref><ref type="bibr" target="#b5">(6)</ref><ref type="bibr" target="#b6">(7)</ref>.</p><p>The Mouse Genome Informatics (MGI; http://www.in formatics.jax.org/) database is the most comprehensive international resource focused on the laboratory mouse as a model organism, providing integrated genetic, genomic and biological data for facilitating study of human health and disease. MGI covers several databases, namely the Mouse Genome Database <ref type="bibr" target="#b7">(8)</ref>, the Gene Expression Database <ref type="bibr" target="#b8">(9,</ref><ref type="bibr" target="#b9">10)</ref>, the Mouse Tumor Biology Database <ref type="bibr" target="#b11">(11)</ref> and the MouseMine project <ref type="bibr" target="#b12">(12)</ref>. The Gene Expression Database (GXD), on which we focus here, is an extensive resource of mouse development expression information. GXD collects and integrates data from a wide variety of expression experiments (including both RNA and protein). Expression data from wild-type and mutant mice are captured, with a focus on endogenous gene expression during development. Knock-in reporter studies are included because they usually reflect the endogenous expression pattern of the targeted gene. However, studies reporting on ectopic gene expression via the use of transgenes, or experiments studying the effects of treatments or other external/ environmental factors are excluded.</p><p>Much of the detailed information provided by GXD is manually curated from the literature. Among all the publications surveyed MGI-wide, GXD curators first identify those that meet the criteria described above.</p><p>Once the publications are identified, the curators annotate within them the genes and ages analyzed and the types of expression assays used. These annotations are combined with the publications information from PubMed to create a searchable index of published experiments on endogenous gene expression during mouse development (http:// www.informatics.jax.org/gxdlit). This index allows researchers to find publications with specific types of expression data. Moreover, it supports GXD staff in prioritizing papers toward a more extensive curation step, namely, the detailed annotation of the expression results.</p><p>The comprehensive up-to-date index, includes Expression Literature Content Records for &gt;24 000 publications and over 15 000 genes.</p><p>In the work presented here we use this large and wellcurated dataset to train and test a classifier that partitions publications in MGI into those that are relevant for GXD and those that are not. This classification task, referred to as triage, is important toward expediting literature curation of developmental expression information.</p><p>Basic mainstream methods for biomedical document classification typically use information obtained from titles and abstracts of publications. Lakiotaki et al. (4) presented a method for classifying a small manually tagged subset (474 articles) of the OHSUMED TREC collection (13) into documents aimed for medical professionals (clinicians) and those aimed at consumers by employing a medical document indexing method, AMTEx <ref type="bibr" target="#b14">(14)</ref>. The latter uses MeSH (15) as a basis for vector representation of medical documents and for classification. The system obtained high precision (94.49%) but low recall (50.85%). Ren et al. (16) also used vector representation, reduced via feature selection, for identifying 9 different experimental designs in the context of neuroimaging, within a small set of 247 published abstracts from human neuroimaging journal articles selected from BrainMap <ref type="bibr" target="#b17">(17,</ref><ref type="bibr" target="#b18">18)</ref>. The reported level of performance using precision and recall were 40 and 85% on average, respectively. Notably, these datasets are both more than an order-of-magnitude smaller than the number of documents considered by GXD, and the tasks addressed do not reflect the magnitude and complexity of the GXD classification challenge.</p><p>Larger scale experiments are reported by Yu et al. <ref type="bibr" target="#b19">(19)</ref>, who developed the TopicalMeSH representation, using MeSH terms as a basis for latent topic vectors, to classify a set of 18 000 drug review documents as relevant or irrelevant to each of 15 classes based on specific treatment conditions. The reported performance, as measured by the F-measure (combining precision and recall), was about 50% per class. Aside from the relatively low level of performance, as MeSH terms are assigned to articles by the NLM only several months after publication, a classification system that relies on MeSH annotations or on AMTEx cannot be applied to new publications that have not yet been assigned MeSH terms. As GXD directly examines new publications as soon as they are available, a classification system relying on MeSH annotations is not an effective route to pursue.</p><p>Another large scale work by Van Auken et al. ( <ref type="formula">6</ref>) is described in the context of the Textpresso information retrieval system <ref type="bibr" target="#b20">(20)</ref>, identifying documents relevant to the WarmBase database <ref type="bibr" target="#b21">(21,</ref><ref type="bibr" target="#b22">22)</ref>. They employ support vector machines (SVMs) as a basis for a semi-automated curation workflow. However, the reported classification results are described for sentences rather than for abstracts or papers, and the reported level of performance is on average 50% recall, 80% precision and 60% F-measure. The same group also reported applying Textpresso to a small set of documents, containing 55 research articles, to identify relevant papers for Gene Ontology Cellular Component curation <ref type="bibr" target="#b23">(23)</ref>, obtaining 79.1% recall and 61.8% precision <ref type="bibr" target="#b6">(7)</ref>.</p><p>In contrast to classification systems that use termfrequency-based document representation, Rinaldi et al.</p><p>(5) introduced the OntoGene system <ref type="bibr" target="#b24">(24)</ref>, relying on advanced natural language processing (NLP) tools to support rich semantic document representation. The OntoGene system was used for the triage task of BioCreative'12 <ref type="bibr" target="#b25">(25)</ref> aiming to select and prioritize documents within a relatively small dataset of 1,725 publications relevant to Comparative Toxicogennomics The system ranks publications by relevance, based on the extraction of target entities and of interactions in which the target entities are involved. OntoGene's reported performance, which was the best among the participants in the task, is about 80% precision and recall. The method has not been shown sufficiently fast to be applicable in practice, and has not been applied to a large dataset of GXD's magnitude. To summarize, while some of the existing methods perform effectively on a small-scale specific task, they have not shown to be a good fit for the large-scale GXD categorization task with which we are concerned.</p><p>Another important distinction between previous work and the work presented here is that the above methods use text obtained only from PubMed abstracts or drug reviews. However, image captions in the biomedical literatures often contain significant and useful information for determining the topic discussed in the publications, as our group and sevearl others have noted before <ref type="bibr" target="#b26">(26)</ref><ref type="bibr" target="#b27">(27)</ref><ref type="bibr" target="#b28">(28)</ref><ref type="bibr" target="#b29">(29)</ref>. As such, we consider here the use of text obtained from image captions as part of the GXD classification process.</p><p>We present a biomedical document classification scheme that uses statistical feature selection to reduce the representation size and to focus the representation on terms that support the GXD classification task. The classifiers we employ and compare are widely applied in biomedical document classification, namely Naı ¨ve Bayes <ref type="bibr" target="#b30">(30)</ref> and Random Forest classifiers <ref type="bibr" target="#b31">(31)</ref><ref type="bibr" target="#b32">(32)</ref><ref type="bibr" target="#b33">(33)</ref>. Our experiments and results, performed over a set of many thousands of documents, demonstrate that using these relatively simple classifiers, coupled with a well-targetted feature-selection method, lead to highly accurate and stable classification. The importance of feature selection was also shown by others before <ref type="bibr" target="#b34">(34,</ref><ref type="bibr" target="#b35">35)</ref>. Our system retains its high level of performance even when applied to the very large set of documents considered by GXD. We also provide results obtained from integrating image captions into the classification process, showing an improved performance. The latter demonstrates the utility and importance of using image captions for supporting biomedical document classification.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials and methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data source</head><p>We downloaded from the MGI references website (http:// www.informatics.jax.org/reference/) a file that contains information pertaining to all 115 027 publications used to curate gene expression information for the MGI database throughout the years 2004-2014. The information includes: PubMed identifier (PMID), title, publication year and a curated indicator stating the sub-project within MGI to which the correponding paper is relevant. From the references included in the file, we identified 13 035 PMIDs of publications that have the indication Expression Literature Records or Expression: Assay Results shown in the Curated Data column. The topics discussed in these publications are considered relevant to GXD. Of these 13 035 relevant publications, only 12 966 were available for free download online in PDF format, and we use those and refer to them as the positive set in our experiments. Of the remaining 101 992 publications in the downloaded references file after the above selection process, 79 284 publications were available for free download online in PDF format. These publications are considered unrelated or irrelevant to GXD. Notably, there is a significant imbalance between the number of available relevant examples <ref type="bibr">(12 966</ref>) and that of irrelevant examples (79 284). It is important to directly address the imbalance in order to train a stable, sensitive and specific classifier under such an imbalanced setting <ref type="bibr" target="#b36">(36)</ref>. To avoid over-simplification of the classification task (e.g. hypothetically-simply classifying all documents as irrelevant would already yield a rather high accuracy), we select 12 354 publications out of the 79 284 irrelevant publications to comprise the actual negative set. In order to overcome potential bias stemming from varied language use and topic distribution differences between the positive set and the negative set, the publications included in the negative set are obtained from the same journals as the relevant ones, and have a similar distribution of publication-years as the relevant ones. The 12 354 negative publications are thus selected at random from among the irrelavant publications that satisfy the two conditions. By keeping the size of the negative set similar to that of the positive set and avoiding shift in time, we ensure similarity of writing style and overall areas of interest between the positive set and the negative set, and avoid the issue of semantic drift between the two sets; a phenomenon that may otherwise bias classification <ref type="bibr" target="#b37">(37)</ref>.</p><p>Image captions, which provide descriptions for figures, form an important source of information in publications. To integrate information from image captions into the classifier, we build an additional datatset, to which we refer as the GXD-caption dataset, in which the text associated with each publication consists not only of title and abstract but also of image captions within the paper. Of the 12 966 publications in our positive set, 1,630 were availabe in plain text format from the PMC Author Manuscript Collection <ref type="bibr" target="#b38">(38)</ref> allowing us to easily obtain figure captions. These documents, for which we have access to titles, abstracts and image captions comprise the positive GXD-caption set. Among the 79 284 irrelevant publications, 11 099 papers were available in plain text format from the PMC, from which figure captions can be readily obtained. As described before, to retain balance, we select 1,696 out of these 11 099 publications to bulid the negative GXD-caption set, similar in size to the positive GXDcaption set. The publications in the negative GXD-caption set are selected at random from a set of papers published in the same journals and having a similar distribution of publication-years as the publications in the positive GXDcaption set. We train/test our classifiers over the combined set including both positive and negative documents. Table <ref type="table" target="#tab_0">1</ref> summarizes the datasets used in our experiments.</p><p>As an additional verification step, we also test our classifiers over an additional subset of 1,000 irrelevant documents outside the training/test set. These documents were selected uniformly at random from among the remaining 9,403 irrelevant documents for which figure captions are available.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Document representation</head><p>Our document representation is based on a variation on the bag-of-terms model that we have introduced and used in our earlier work <ref type="bibr" target="#b39">(39,</ref><ref type="bibr" target="#b40">40,</ref><ref type="bibr" target="#b41">41)</ref>. The representation uses a set of terms consisting of both unigrams (single words) and bigrams (pairs of two consecutive words). Using a limited number of meaningful terms as features has proven effective and efficient in our earlier work. To reduce the number of features, we first remove standard stop words <ref type="bibr" target="#b42">(42)</ref>; we also remove rare terms (appearing in a single publication within the dataset), as well as overly frequent ones (appearing within over 60% of the publications in the dataset). The last dimensionality-reduction step, which we introduced before <ref type="bibr" target="#b39">(39)</ref>, employs the Z-score Test <ref type="bibr" target="#b43">(43)</ref> to select features whose probability to occur in the positive set is statistically significantly different from their probability to occur in the negative set. The Z-score calculation process is described next.</p><p>Let t be a term, d be a publication, D r denote the set of GXD-relevant documents and D n denote the set of documents irrelevant to GXD. The probability of term t to occur within relevant publications, Pr(tjD r ), is estimated as:</p><p>Pr tjD r ð Þ% # of documents in D r that have term t Total # of documents in D r :</p><p>Similarly, the probability of term t to occur within irrelevant publications, Pr(tjD n ), is estimated as:</p><formula xml:id="formula_0">Pr tjD n ð Þ% # of documents in D n that have term t Total # of documents in D n :</formula><p>We calculate Pr(tjD r ) and Pr(tjD n ) for each term t. Using the formulation above, a term t is considered distinguishing for the Gene Expression topic, if and only if its probability to occur in publications associated with GXD, Pr(tjD r ), is statistically significantly different from its probability to occur in publications not associated with GXD, Pr(tjD n ). To determine the significance of the difference between these two probabilities, the Z-score statistic is employed <ref type="bibr" target="#b39">(39,</ref><ref type="bibr" target="#b43">43)</ref>, where:</p><formula xml:id="formula_1">Z score ¼ Pr tjD r ð ÞÀPr tjD n ð Þ ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi p 1À p ð Þ 1 Dr j j þ 1 Dn j j r ; and p ¼ D r j jÂPr tD r ð Þþ jD n j Â PrðtjD n Þ D r j j þ jD n j</formula><p>The higher the absolute value of the Z-score, the greater the confidence level that the difference between Pr(tjD r ) and Pr(tjD n ) is significant. For the publications pertaining to the GXD dataset that we have constructed, we set a threshold of 1.96 for the Z-score, that is, if the Z-score of a term is higher than 1.96, it is considered to be distinguishing with respect to our classification task. For the documents in the GXD-caption dataset, we employ two different Z-score thresholds: one for selecting distinguishing terms from the captions, set at 1.63, and one for selecting terms from the titles/abstracts, set at 1.96.</p><p>To ensure that the test set is not used for feature selection and is excluded from both the representation and the classification-learning process, the feature selection steps discussed above use only data from the training set. After n distinguishing terms are identified through the feature selection process from the training set, these distinguishing terms are used to represent the documents in the test set. Each document d in the test set is represented as a simple binary vector of the form V d ¼ &lt;vt 1 , vt 2 , . . ., vt n &gt;, where vt i ¼1 if the i th term in the distinguishing terms list is presented in article d, and 0 otherwise.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Classifiers</head><p>We trained and tested two types of classifiers, Naı ¨ve Bayes and Random Forest, over the GXD dataset and over the GXD-caption dataset, based on the document representation desribed in the Document Representaiton part. The Weka implementation was used to train and test the classifiers <ref type="bibr" target="#b44">(44)</ref>.</p><p>The first classifier used is the Naı ¨ve Bayes, which is a simple probabilistic classifier based on the assumption that the value of each feature is conditionally independent of all other features, given the class value. In our case, to determine if a publication d is relevant to GXD, the posterior probability P(djrelevant) is compared to the posterior probability P(djirrelevant). If P(djrelevant) is greater, publication d is classified as relevant, otherwise, it is labeled as irrelevant. As the Naı ¨ve Bayes classifier is simple and fast, it is readily applicable to a large and high-dimensional dataset and we use it in our experiments.</p><p>We also ran experiments using the Random Forest classifier. The Random Forest consists of an ensemble of treestructure classifiers, such that each node in each tree checks for the value of a subset of features, typically chosen through a stochastic process called 'feature bagging' <ref type="bibr" target="#b32">(32)</ref>. If one or a few of the features are strong predictors for the target class, these features are checked in many of the trees, causing the trees to become correlated <ref type="bibr" target="#b33">(33)</ref>. The Random Forest classifier has shown to be applicable to highdimensional high-volume data. We thus use it for the GXD document classification task. The forest consists of 2000 decision trees, and the number of features stochastically selected for each tree is set to 90.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experiments and results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Experiments</head><p>We first conducted experiments over the large GXD dataset, in wich each document is represented based on titleand-abstract only. We then conducted experiments over the GXD-caption dataset, in which captions are also included in the representation. In addition, we also tested our classifier that uses title, abstract and captions over a set of 1,000 irrelevant documents selected as described in the Methods section.</p><p>The first group of experiments aims to test the performance of the proposed classification method over the large scale GXD dataset. To ensure our results are statistically significant, we trained/tested the classifiers using three sets of cross-validation runs with different settings, as described next.</p><p>For the first set of cross-validation experiments over the GXD dataset, to ensure stability of the results, we executed five distinct complete 5-fold cross validation runs, each run using a different 5-way split of the dataset, so that each complete run consists of 25 training/test sessions in total. In each session, 80% of the data was used for the training process, in which about 11 400 distinguishing terms were selected to repersent publications and classifiers were trained based on the represented publications, while 20% of the data was used for testing the classifiers.</p><p>To validate that the classification results remain steady even when the size of training set varies, we performed two additional sets of experiments. In one (to which we refer as the Second Set of experiments over GXD dataset), we enlarged the size of the training set to be 90% of the data, while reducing the test size to 10%, by running 10-fold cross validation. As before, we employed 10 complete sets of stratified 10-fold cross validation, so that each complete run consists of 100 training/test sessions in total. In each session, about 12 500 distinguishing terms were selected from the training part of the data and were used to represent documents in the test set.</p><p>In the third set of experiments, we reduced the size of the training set, and increased the size of the test set, by dividing both the positive set and the negative set into just two subsets: half of the data was treated as the training set while the other half became the test set. The subsets were formed so that the training and the test sets have a similar distribution of publication-years. We trained the Random Forest classifier on the training set, where about 7,600 terms were selected and used for document representation. The classifier was then tested on the test set.</p><p>To assess the impact of using captions vs. titlesand-abstracts only, we excuted a second group of experiments, consisting of three sets of experiments over the GXD-caption dataset described next. Since this dataset is smaller, we used only five-fold cross validation, employing five complete runs of cross-validation, where a different five-way split of the dataset was used in each complete run, so that each run comprised a total of 25 sessions of training/test, to ensure statistial significance of the results.</p><p>For the first set of expriments over the GXD-caption set, we used only titles and abstracts of the publications as training/test data. In each of the 25 sessions, we selected about 1,460 distinguishing terms based on the training set, which were used as features for representing the documents in the test set.</p><p>For the second set of experiments over the GXD-caption dataset, we used only image captions of publications in our training/test datasets. We selected about 1,940 distinguishing terms based on the training set alone, and used those as features for representing the documents in the test dataset.</p><p>In addition to the above experiments, we conducted a third set of experiments over the GXD-caption dataset, in which we used text from captions as well as text from titles and abstracts in order to represent documents and classify them. To intergrate the two sources of information into one representation, we first separately identified a set of distinguishing terms from the captions, and from the titles and abstracts; we then used the union of the two sets as a basis for representation and classification. The total number of terms used in this integrated representation was about 2,740 per experiment.</p><p>As an additional verification step, we also trained a Random Forest classifier using the whole GXD-caption dataset (3326 documents) as the training set, where 3438 distinguishing terms from title, abstract and captions were selected as features for document representation. We tested the classifier over the set of 1000 irrelevant documents selected from among $9400 negative documents as described in the Methods section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results and analysis</head><p>We report results using standard measures widely employed for document classification evaluation, namely Precision, Recall, F-measure and Accuracy <ref type="bibr" target="#b45">(45)</ref>. For biomedical document curation, Recall is often viewed as more important than Precision because missing relevant documents may compromise the integrity of the database. Therefore, we also include the utility measure introduced by TREC Genomics, which biases the evaluation in favor of high recall. We use two versions of the utility measure: Utility-10 and Utility-20, each giving a different weights to true positives <ref type="bibr" target="#b46">(46)</ref>. Utility-10 and Utility-20 measures are calculated as follows:</p><formula xml:id="formula_2">UTIL À 10 ¼ 10 Â TP À FP 10 Â TP þ FP ð Þ ; UTIL À 20 ¼ 20 Â TP À FP 20 Â TP þ FP ð Þ :</formula><p>where TP is the number of true positives and FP is the number of false positives. Table <ref type="table" target="#tab_1">2</ref> shows the results obtained from the first three sets of cross validation experiments over the GXD dataset. Row 1 and Row 2 show results obtained from the Naı ¨ve Bayes classifier and from the Random Forest classifier, respectively, where the representation is based on title-andabstract terms, under 5 complete runs of 5-fold cross validation. Row 3 and Row 4 show the performance of the two classifiers on the same dataset, under 10 complete runs of 10-fold cross validation. Row 5 shows results obtained when half of the GXD dataset was used for training and the other half for testing. Figure <ref type="figure" target="#fig_1">1</ref> graphically depicts the results shown in Table <ref type="table" target="#tab_1">2</ref>. Both Table <ref type="table" target="#tab_1">2</ref> and Figure <ref type="figure" target="#fig_1">1</ref> demonstrate that using our proposed method leads to very high level performance on the large scale GXD dataset, according to every evaluation measure, which indicates that the proposed document classification method is effective and can indeed be useful in practice.</p><p>Table <ref type="table" target="#tab_2">3</ref> shows results obtained from cross validation experiments over the GXD-caption dataset. Rows 1 and 2 summarize the performance of the Naı ¨ve Bayes and the Random Forest classifiers, respectively, when applied to publications in the GXD-caption dataset, represented based on information obtained from title and abstract only. Rows 3 and 4 show the results of the two respective classifiers, when applied to the data represented using terms obtained from the image captions only. Rows 5 and 6 summarize results obtained from the two classifiers when the representation uses terms from title, abstract and image captions. Table <ref type="table" target="#tab_2">3</ref> shows that the classifiers generated in the last set of expriments, which rely on features obtained from title, abstract and image captions, have the highest Precision, Recall, F-measure, Accuracy, Utility-10 and Utility-20. Figure <ref type="figure" target="#fig_2">2</ref> graphically depicts the results shown in Table <ref type="table" target="#tab_2">3</ref>. In particular, Figure <ref type="figure" target="#fig_2">2</ref> shows that the Recall, F-measure and Accuracy of our classifiers all clearly increase with the introduction of text from image captions. Both Table <ref type="table" target="#tab_2">3</ref> and Figure <ref type="figure" target="#fig_2">2</ref> indicate that image captions indeed provide valuable information supporting the GXD document classification task.</p><p>Recall that we also applied our classifier over a set of 1,000 irrelevant documents selected as decribed in the Methods section as an additional verification step. The resulting true negative rate (the proportion of negative publications that are correctly identified) is 0.863. It is about the same as the true negative rate obtained through the cross validation experiments above, which is on average 0.877 with a standard deviation of 0.009. That is, the level of performance obained through the cross validation experiments is retained on documents outside the training/test set. The results thus indicate that our classifiers are indeed effective for addressing the GXD classification task.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusion and future work</head><p>We have presented a biomedical document classification framework for effectively identifying publications relevant to the Mouse Gene Expression Database (GXD) using a realistic large scale dataset. Our precision, recall, F-measure, accuracy and utility measures are about 90% for all experiments employing different cross validation settings, which shows that our classifier is effective and robust. This performance level is higher than any previously reported over realistically large biomedical document datasets <ref type="bibr" target="#b19">(19,</ref><ref type="bibr" target="#b47">47)</ref>, despite the relative simplicity of the classifiers used. We again note that our feature selection step is an important step toward the improved performance. Moreover, our classifier retains a similar level of performance on documents outside the training/test set, which suggests that our classifier is stable and applicable.</p><p>Additionally, in terms of efficiency, the total time for pre-processing and classifying a single new publication using our classifier is 20 ms on average. Thus, our method is sufficiently efficient for supporting the actual document classification task addressed by GXD.</p><p>Notably, our experiments use a variety of features obtained from different parts of the publication. Our results indicate that using features obtained from title, abstract and image captions indeed performs best, supporting the idea that the image caption provides substantial evidence for biomedical document classification.</p><p>Given the vast amount of irrelevant publications (79 284), as part of future work, rather than train a classifier based on a balanced subsample, we plan to further improve the classifier by developing strategies to better utilize more of the irrelevant documents as part of the training itself. We also note that as captions were not readily available for all the documents in the GXD dataset, the comparative experiments that use caption-based representaiton were limited to the GXD-caption dataset, which is smaller. In the future, we plan to use image captions from a larger set of   documents, by harvesting figure captions directly from the PDF. We are also actively working on combining information obtained direclty from text as well as the images for addressing biomedical document classification.  <ref type="table" target="#tab_2">3</ref>). AB indicates using features from titles/abstracts only. CAP indicates using features from captions alone. AB_CAP indicates using features from both captions and titles/abstracts.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>NB</head><label></label><figDesc>denotes Naı ¨ve Bayes classifier; RF denotes Random Forest classifier. The suffix 5 indicates using 5 complete runs of 5-fold cross validation; the suffix 10 indicates using 10 complete runs of 10-fold cross validation. H-and-H represents using half of the GXD dataset for training and the other half for testing.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Performance of our classifiers, measured on the GXD dataset according to the different performance metrics, calculated over the various cross-validation settings. NB denotes Naı ¨ve Bayes; RF denotes Random Forest classifier. The suffix 5 denotes average over 5 complete runs of 5-fold cross validation (25 runs in total); the suffix 10 denotes average over10 complete runs of 10-fold cross validation (100 runs in total). half-training-halftesting represents runs in which half of the GXD dataset was used for training and the other half for testing.</figDesc><graphic coords="7,125.86,216.28,360.79,131.24" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Comparison of classification results obtained over the GXD-caption dataset using different sets of features. NB denotes Naı ¨ve Bayes; RF denotes Random Forest classifier. AB indicates using text-features from titles/abstracts only; CAP indicates using features from captions alone; AB_CAP indicates using features from both captions and titles/abstracts. The results shown are averaged over five complete runs of 5-fold cross validation (25 runs in total. Standard deviations are shown in Table3).</figDesc><graphic coords="8,125.86,217.13,360.79,126.54" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head>Table 1 .</head><label>1</label><figDesc>The datasets used for training and testing of our bio-</figDesc><table><row><cell cols="2">medical document classification</cell><cell></cell><cell></cell></row><row><cell>Dataset</cell><cell cols="2">Number of examples</cell><cell></cell></row><row><cell></cell><cell>Positive</cell><cell>Negative</cell><cell>Total</cell></row><row><cell>GXD</cell><cell>12 966</cell><cell>12 354</cell><cell>25 320</cell></row><row><cell>GXD-caption</cell><cell>1630</cell><cell>1696</cell><cell>3326</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2 .</head><label>2</label><figDesc>Classification evaluation measures for our classifiers on the GXD dataset using different cross-validation settings</figDesc><table><row><cell>Classifiers</cell><cell>Precision</cell><cell>Recall</cell><cell>F-measure</cell><cell>Accuracy</cell><cell>Utility-10</cell><cell>Utility-20</cell></row><row><cell>NB5</cell><cell>0.892 (0.005)</cell><cell>0.957 (0.003)</cell><cell>0.923 (0.003)</cell><cell>0.917 (0.004)</cell><cell>0.876 (0.006)</cell><cell>0.881 (0.005)</cell></row><row><cell>RF5</cell><cell>0.908 (0.006)</cell><cell>0.921 (0.005)</cell><cell>0.915 (0.004)</cell><cell>0.912 (0.005)</cell><cell>0.895 (0.007)</cell><cell>0.899 (0.007)</cell></row><row><cell>NB10</cell><cell>0.891 (0.007)</cell><cell>0.957 (0.006)</cell><cell>0.923 (0.004)</cell><cell>0.917 (0.005)</cell><cell>0.875 (0.008)</cell><cell>0.881 (0.008)</cell></row><row><cell>RF10</cell><cell>0.908 (0.008)</cell><cell>0.922 (0.008)</cell><cell>0.915 (0.006)</cell><cell>0.912 (0.007)</cell><cell>0.894 (0.009)</cell><cell>0.899 (0.009)</cell></row><row><cell>RF-H-and-H</cell><cell>0.905</cell><cell>0.925</cell><cell>0.915</cell><cell>0.913</cell><cell>0.896</cell><cell>0.900</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2"><head>Table 3 .</head><label>3</label><figDesc>Classification results obtained over the GXD-caption dataset using different set of features</figDesc><table><row><cell>Classifiers</cell><cell>Precision</cell><cell>Recall</cell><cell>F-measure</cell><cell>Accuracy</cell><cell>Utility-10</cell><cell>Utility-20</cell></row><row><cell>NB_AB</cell><cell>0.874 (0.023)</cell><cell>0.656 (0.027)</cell><cell>0.749 (0.022)</cell><cell>0.783 (0.017)</cell><cell>0.866 (0.024)</cell><cell>0.872 (0.023)</cell></row><row><cell>RF_AB</cell><cell>0.779 (0.016)</cell><cell>0.768 (0.024)</cell><cell>0.773 (0.017)</cell><cell>0.802 (0.015)</cell><cell>0.765 (0.018)</cell><cell>0.776 (0.017)</cell></row><row><cell>NB_CAP</cell><cell>0.831 (0.018)</cell><cell>0.766 (0.024)</cell><cell>0.797 (0.019)</cell><cell>0.808 (0.017)</cell><cell>0.820 (0.019)</cell><cell>0.828 (0.018)</cell></row><row><cell>RF_CAP</cell><cell>0.855 (0.019)</cell><cell>0.758 (0.017)</cell><cell>0.804 (0.015)</cell><cell>0.817 (0.014)</cell><cell>0.846 (0.021)</cell><cell>0.853 (0.020)</cell></row><row><cell>NB_AB&amp;CAP</cell><cell>0.877 (0.018)</cell><cell>0.816 (0.018)</cell><cell>0.846 (0.014)</cell><cell>0.853 (0.013)</cell><cell>0.870 (0.019)</cell><cell>0.876 (0.018)</cell></row><row><cell>RF_AB&amp;CAP</cell><cell>0.876 (0.019)</cell><cell>0.829 (0.015)</cell><cell>0.852 (0.013)</cell><cell>0.858 (0.012)</cell><cell>0.869 (0.020)</cell><cell>0.875 (0.019)</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">Database, Vol. 2017, Article ID bax017 Downloaded from https://academic.oup.com/database/article/doi/10.1093/database/bax017/3084695 by Universita di Padova user on 17 May 2023</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">Downloaded from https://academic.oup.com/database/article/doi/10.1093/database/bax017/3084695 by Universita di Padova user on 17 May 2023</note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Acknowledgements</head><p>We thank Debarati Roychowdhury and Pengyuan Li for their helpful comments on earlier versions of the manuscript, and Constance Smith for helpful discussions.</p></div>
+			</div>
+
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Funding</head><p>This work was partially supported by NIH grant R56LM011354A. The GXD is supported by NIH grant HD062499.</p><p>Conflict of interest. None declared.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Biomedical language processing: what&apos;s beyond PubMed?</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hunter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">B</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mol. Cell</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="589" to="594" />
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A survey of current work in biomedical text mining</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Hersh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brief. Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="page" from="57" to="71" />
+			<date type="published" when="2005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Community challenges in biomedical text mining over 10 years: success, failure and the future</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brief. Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page" from="132" to="144" />
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">Towards personalized medical document classification by leveraging UMLS semantic network. International Conference on Health Information Science</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lakiotaki</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hliaotakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Koutsos</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013" />
+			<publisher>Springer</publisher>
+			<biblScope unit="page" from="93" to="104" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Using the OntoGene pipeline for the triage task of BioCreative</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Rinaldi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Clematide</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Hafner</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012" />
+			<publisher>Database</publisher>
+			<biblScope unit="page">53</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title level="m" type="main">Text mining in the biocuration workflow: applications for literature curation at WormBase, dictyBase and TAIR. Database</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Van Auken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Fey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">Z</forename><surname>Berardini</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012" />
+			<biblScope unit="page">40</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Semi-automated curation of protein subcellular localization: a text mining-based approach to Gene Ontology (GO) Cellular Component curation</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Van Auken</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jaffery</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="page">228</biblScope>
+			<date type="published" when="2009" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">The Mouse Genome Database</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Bult</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">T</forename><surname>Eppig</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Blake</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="D840" to="D847" />
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+	<note>Database issue</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">The mouse gene expression database: new features and how to use them effectively</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Finger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Hayamizu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Genesis</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="page" from="510" to="522" />
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">GXD: a community resource of mouse Gene Expression Data</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">H</forename><surname>Finger</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">F</forename><surname>Hayamizu</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2015" />
+			<publisher>Mamm</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title/>
+	</analytic>
+	<monogr>
+		<title level="j">Genome</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="314" to="324" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Mouse Tumor Biology (MTB): a database of mouse models for human cancer</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">J</forename><surname>Bult</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Krpuke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Begley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">43</biblScope>
+			<biblScope unit="page" from="D818" to="D824" />
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+	<note>Database issue</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">MouseMine: a new data warehouse for MGI</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Motenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">B</forename><surname>Neuhauser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>O'keefe</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mamm. Genome</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="325" to="330" />
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ohsumed Dataset</surname></persName>
+		</author>
+		<ptr target="http://davis.wpi.edu/xmdv/datasets/ohsumed" />
+		<imprint>
+			<date type="published" when="2005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The AMTEx approach in the medical document indexing and retrieval application</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Hliaoutakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zervanou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">G</forename><surname>Petrakis</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Data Knowl. Eng</title>
+		<imprint>
+			<biblScope unit="volume">68</biblScope>
+			<biblScope unit="page" from="380" to="392" />
+			<date type="published" when="2009" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title/>
+		<ptr target="https://www.nlm.nih.gov/mesh/" />
+	</analytic>
+	<monogr>
+		<title level="j">Medical Subject Headings</title>
+		<imprint>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Online biomedical publication classification using multi-instance multi-label algorithms with feature reduction</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ren</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE 14th International Conference on Congnitive Informatics &amp; Cognitive Computing</title>
+				<imprint>
+			<date type="published" when="2015" />
+			<biblScope unit="page" from="234" to="241" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">BrainMap taxonomy of experimental design: description and evaluation. Hum</title>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">R</forename><surname>Larid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Fox</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Brain Mapp</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="185" to="198" />
+			<date type="published" when="2005" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Brainmap</surname></persName>
+		</author>
+		<ptr target="http://www.brainmap.org" />
+		<imprint>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Improving the utility of MeSHV R terms using the TopicalMeSH representation</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Yu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bernstam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J. Biomed. Inform</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="77" to="86" />
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Textpresso: an ontology-based information retrieval and extraction system for biological literature</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">M</forename><surname>Muller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><forename type="middle">E</forename><surname>Kenny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">W</forename><surname>Sternberg</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Plos Biol</title>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page">e309</biblScope>
+			<date type="published" when="2004" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">WarmBase 2016: expending to enable helminth genomic research</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">H</forename><surname>Kevin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">B</forename><surname>Bruce</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Scott</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="page" from="D774" to="D780" />
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Warmbase</surname></persName>
+		</author>
+		<ptr target="http://www.warmbase.org" />
+		<imprint>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">Gene Ontology: tool for the unification of biology</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ashburner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">A</forename><surname>Ball</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Blake</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nat. Genet</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="page" from="25" to="29" />
+			<date type="published" when="2000" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ontogene</surname></persName>
+		</author>
+		<ptr target="http://www.ontogene.org" />
+		<imprint>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Hirschman</surname></persName>
+		</author>
+		<title level="m">Biocuration workflows and text mining: overview of the BioCreative 2012 Workshop Track II. Database</title>
+				<imprint>
+			<date type="published" when="2012" />
+			<biblScope unit="page">43</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Rule-based extraction of experimental evidence in the biomedical domain: the KDD Cup</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Regev</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Finkelstein-Landau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Feldman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM SIGKDD Explorations Newsletter</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="90" to="92" />
+			<date type="published" when="2002" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Simple and efficient machine learning frameworks for identifying protein-protein interaction relevant articles and experimental methods used to study the interactions</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yu</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">12</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2011" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Integrating image data into biomedical text categorization</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shatkay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Blostein</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="page" from="e446" to="e453" />
+			<date type="published" when="2006" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Extraction of endoscopic images for biomedical figure classification</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xue</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>You</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Chachra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">SPIE Medical Imaging. International Society for Optics and Photonics</title>
+		<imprint>
+			<biblScope unit="page" from="94180P" to="94180P" />
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<analytic>
+		<title level="a" type="main">On the optimality of the simple Bayesian classifier under zero-one loss</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Domingos</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Pazzani</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="page" from="103" to="130" />
+			<date type="published" when="1997" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Random forests</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Breiman</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Mach. Learn</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page" from="5" to="32" />
+			<date type="published" when="2001" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Random decision forests. Document Analysis and Recognition</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Ho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Third IEEE International Conference on Document Analysis and Recognition</title>
+				<meeting>the Third IEEE International Conference on Document Analysis and Recognition</meeting>
+		<imprint>
+			<date type="published" when="1995" />
+			<biblScope unit="page" from="278" to="282" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<analytic>
+		<title level="a" type="main">The random subspace method for constructing decision forests</title>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">K</forename><surname>Ho</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Trans. Pattern Anal. Mach. Intell</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="page" from="832" to="844" />
+			<date type="published" when="1998" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Going from where to why-interpretable prediction of protein subcellular localization</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Briesemeister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rahnenfu ¨hrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kohlbacher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="1232" to="1238" />
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">YLoc-an interpretable web server for predicting subcellular localization</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Briesemeister</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Rahnenfu ¨hrer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Kohlbacher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Nucleic Acids Res</title>
+		<imprint>
+			<biblScope unit="volume">38</biblScope>
+			<biblScope unit="page" from="W497" to="W502" />
+			<date type="published" when="2010" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title level="m" type="main">The class imbalance problem in Medline documents classification</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">F</forename><surname>Gonz Alez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Pav On</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Laza</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Feature Generation, Feature Selection, Classifiers, and Conceptual Drift for Biomedical Document Triage</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">T</forename><surname>Bhupatiraju</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Hersh</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2004" />
+			<publisher>Trec</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title/>
+		<ptr target="http://www.ncbi.nlm.nih.gov/pmc/about/mscollection" />
+	</analytic>
+	<monogr>
+		<title level="j">PMC Author Manuscript Collection</title>
+		<imprint>
+			<date type="published" when="2015" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">EpiLoc: a (working) text-based system for predicting protein subcellular location</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brady</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shatkay</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pacific Symp. Biocomput</title>
+		<imprint>
+			<biblScope unit="page" from="604" to="615" />
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Utilizing imagebased features in biomedical document classification</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Jeong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">V</forename><surname>Roihth</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE International Conference on Image Processing (ICIP)</title>
+				<imprint>
+			<date type="published" when="2015" />
+			<biblScope unit="page" from="4451" to="4455" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">OCR-based image features for biomedical image and article classification: identifying documents relevant to cis-regulatory elements</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shatkay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><surname>Ramya</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Santosh</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the ACM Conference on Bioinformatics</title>
+				<meeting>the ACM Conference on Bioinformatics</meeting>
+		<imprint>
+			<date type="published" when="2012" />
+			<biblScope unit="page" from="98" to="104" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<author>
+			<persName><forename type="first">J</forename><surname>Leskovec</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Rajaraman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Ullman</surname></persName>
+		</author>
+		<title level="m">Mining of Massive Datasets</title>
+				<meeting><address><addrLine>Cambridge</addrLine></address></meeting>
+		<imprint>
+			<publisher>Cambridge University Press</publisher>
+			<date type="published" when="2012" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title level="m" type="main">Probability and Statistics for Engineers and Scientists</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">H</forename><surname>Myers</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">E</forename><surname>Walpole</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1993" />
+			<publisher>Macmillan</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<analytic>
+		<title level="a" type="main">The WEKA data mining software: an update</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Frank</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Holmes</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">ACM SIGKDD Explorations Newsletter</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="10" to="18" />
+			<date type="published" when="2009" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Evaluation: from precision, recall and Fmeasure to ROC, informedness, markedness and correlation</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Powers</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2011" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<author>
+			<persName><forename type="first">W</forename><forename type="middle">R</forename><surname>Hersh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Yang</surname></persName>
+		</author>
+		<title level="m">TREC 2005 genomics track overview. TREC 2005 Notebook</title>
+				<imprint>
+			<date type="published" when="2005" />
+			<biblScope unit="page" from="14" to="25" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Automating document classification for the Immune Epitope Database</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">A</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMC Bioinformatics</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="page">1</biblScope>
+			<date type="published" when="2007" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

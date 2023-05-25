@@ -1,0 +1,26 @@
+.tool_bar{
+    padding-bottom: 1%;
+}
+.del{
+    float:right;
+    margin-right:2vw;
+}
+.header_bar{
+    /*height:5vh;*/
+    margin:0.5vh 5%;
+    /*margin-left:5%;*/
+    /*margin-right:5%;*/
+    position: relative;
+    /*z-index:12;*/
+    /*width:100%;*/
+    /*background-color: rgb(98,130,149);*/
+}
+
+/*.MuiToolbar-root{*/
+/*    min-height: 5vh !important;*/
+/*    height: 5vh;*/
+/*}*/
+/*.css-r8u8y9{*/
+/*  width:220px!important;*/
+
+/*}*/

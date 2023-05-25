@@ -1,0 +1,47 @@
+{% extends 'RelAnno_App/base.html' %}
+
+{% block title %}
+<title>METATRON</title>
+{% endblock title %}
+
+
+{% load static %}
+
+{% block scripts %}
+
+{% endblock scripts %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{% static "css/index_container.css" %}" />
+
+
+
+<!-- Header -->
+<section id="header">
+  <div class="inner">
+
+
+
+  </div>
+</section>
+{#        <div class="flex-container site-branding"></div>#}
+
+<!-- Container -->
+<div class="container-fluid">
+  <!-- Content here -->
+  <div id="root"></div>
+    <script type="text/javascript">
+      window.username = '{{ username }}'
+      window.profile = '{{ profile }}'
+      window.baseurl = '{{ baseurl }}'
+      window.error = '{{ orcid_error }}'
+      window.orcid = '{{ orcid }}'
+    </script>
+
+  <script type="text/javascript" src="{% static 'js/bundle/bundle.js' %}"></script>
+</div>
+
+
+
+{% endblock body %}

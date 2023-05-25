@@ -1,0 +1,56 @@
+.addcollectionclass{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.addcontainer{
+    padding:3%
+}
+.uploadDoc{
+    border-radius: 4px;
+    height:100px
+}
+.uploadfiles{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    text-align: center;
+    margin:2%
+}
+.clickable:hover{
+    cursor:pointer;
+    color:royalblue;
+}
+.collectionButt{
+    margin-right: 2%;
+}
+.confirmButt{
+    margin: 2%;
+    display: inline-block;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.labels_diag{
+    margin:3%
+}
+.center_elements{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.new_size{
+    font-size:1.5em;
+}
+.buttontem:hover{
+    cursor:pointer;
+    color:royalblue;
+    text-decoration: underline;
+
+}
+.buttontem{
+    color:royalblue;
+
+}
