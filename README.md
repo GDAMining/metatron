@@ -12,6 +12,19 @@ Clone or donwload this repository. Open the **metatron** folder and, replace the
 
 Run a new terminal session and run ```docker-compose up```. This procedure will take some minutes depending on your hardware and you internet connection. When the procedure is finished you can open a new browser winodw (chrome is recommended) and you can start uploading new documents.
 
+
+## Annotation Interface
+In the annotation interface you can visualize your annotations and annotate collections' documents.
+<p align="center">
+   <img src="./img/1.jpg" alt="logo" width="900px"/>
+</p>
+
+   1. In the main header it is possible to logout, and access to statistics and collections pages;
+   2. In the document header it is possible to change document, change collection, annotate a new assertion, delete the annotation for the document, and open annotation panel;
+   3. The annotation panel allows you to visualize you annotations performed for each type;
+   4. The part of the page where the textual document is;
+   5. Vertical toolbar which allows users to: change collection, filter documents, chack other users' annotations, get an overview of the statistics of the collection, customize colors and font, upload new documents, concepts, annotations, download the annotation, automatically annotate the documents (from A to J in the figure).
+
 ## Customizability and Collections
 MetaTron allows the users to create one or more  _collections_: a collection contains one or more documents which can be annotated by one or more users. To create a new collection go to COLLECTIONS button at the top of the main interface which will redirect to the collections page. This page contains the list of collections a user can annotate and a form to create a new collection. 
 
@@ -35,17 +48,7 @@ To create a new collection, click on ADD COLLECTION to open the form. To create 
 When a new member is added, it will not be automatically able to annotate the collection: an invitation is sent to them, and then, once that they accept the invitation, they will be able to annotate the documents.
 
 
-## Annotation Interface
-In the annotation interface you can visualize your annotations and annotate collections' documents.
-<p align="center">
-   <img src="./img/1.jpg" alt="logo" width="900px"/>
-</p>
 
-   1. In the main header it is possible to logout, and access to statistics and collections pages;
-   2. In the document header it is possible to change document, change collection, annotate a new assertion, delete the annotation for the document, and open annotation panel;
-   3. The annotation panel allows you to visualize you annotations performed for each type;
-   4. The part of the page where the textual document is;
-   5. Vertical toolbar which allows users to: change collection, filter documents, chack other users' annotations, get an overview of the statistics of the collection, customize colors and font, upload new documents, concepts, annotations, download the annotation, automatically annotate the documents.
 
 
 ## Annotations 
@@ -66,7 +69,7 @@ When a mention is selected, it will be highlighted in blue color.
 When a new mention is selected, it is possible to open a mention panel by right-clicking on the mention. A menu with a set of options is displayed, in particular, from the mention panel it is possible to:
 
 1. Get more information about the mention -- i.e., the time of annotation and the number of annotators who annotated the mention;
-2. Receive some suggestions about the concepts that can be associated to the mention;
+2. Receive some suggestions about the concepts that can be associated to the mention; users can have an overview of all the concepts that have been associated to the mention by their teammates and select to associate to the mention one or more of these concept.
 3. Link a new concept;
 4. Add a relationship;
 5. Delete the mention.
@@ -85,7 +88,7 @@ To associate a new concept to a mention, right-click on the mention and select t
 </p>
 
 **Relationship annotation**
-A relationship is composed of three main elements: a subject, a predicate, and an object. At least one of these three elements must be a mention; the other two elements can be concepts unlinked to any mention. à
+A relationship is composed of three main elements: a subject, a predicate, and an object. At least one of these three elements must be a mention; the other two elements can be concepts unlinked to any mention. 
 
 To annotate a new relationship, start selecting the mention that will be part of your mention, once selected the mention it will be the subject of the relationship by default; you can change the role of the mention by right clicking on it: a drop down menu will appear and you can select one between subject, predicate and object. To annotate other mentions that take part in the relationship, just click on them and change the role (if needed). To add new concepts to the relationship, the menu on the right allows to open the concepts modal (the same used in the concepts linking) where it is possible to select the desired concept. 
 
@@ -109,6 +112,12 @@ Document-level annotation concern the entire document content and are not tied t
 
  **Assertions annotation**
 Assertions are relationships between three distinct concepts that can be inferred from the document content. Concepts are not tied to any mention. To select a new assertion click on the button "+ ASSERTION". A panel on the right will open with the possibility to select the concepts composing the assertion.
+
+
+## AutoTron and the Automatic Annotation
+It is possible to automatically annotate the documents relying on AutoTron which provides built-in predictions for assertion and relationship annotation. Two tasks have been implemented: _GCA - Gene Cancer Association_ and _GDA - Gene Disease Association_. AutoTron will automatically annotate mentions, link concepts, and relationships (or assertions).
+
+
 
 ### The annotation panel
 The annotation panel can be opened by clicking on the ANNOTATION button in the annotation interface. It is possible to select one or more annotation types; then, all the annotations will be displayed and it is possible to view, edit and remove the desired annotations.
