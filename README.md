@@ -35,7 +35,20 @@ To create a new collection, click on ADD COLLECTION to open the form. To create 
 When a new member is added, it will not be automatically able to annotate the collection: an invitation is sent to them, and then, once that they accept the invitation, they will be able to annotate the documents.
 
 
-## Annotations and Annotation Interface
+## Annotation Interface
+In the annotation interface you can visualize your annotations and annotate collections' documents.
+<p align="center">
+   <img src="./img/1.jpg" alt="logo" width="900px"/>
+</p>
+
+   1. In the main header it is possible to logout, and access to statistics and collections pages;
+   2. In the document header it is possible to change document, change collection, annotate a new assertion, delete the annotation for the document, and open annotation panel;
+   3. The annotation panel allows you to visualize you annotations performed for each type;
+   4. The part of the page where the textual document is;
+   5. Vertical toolbar which allows users to: change collection, filter documents, chack other users' annotations, get an overview of the statistics of the collection, customize colors and font, upload new documents, concepts, annotations, download the annotation, automatically annotate the documents.
+
+
+## Annotations 
 ### Mention-level annotations
 MetaTron provides three types of mention-level annotation. Mention-level annotations concern specific text-spans inside the document's textual content, hence, they do not consider the entire document. Mention-level annotations are: (i) mentions annotation, (ii) concepts linking, and (iii) relationship annotation.
 
@@ -101,4 +114,3 @@ Assertions are relationships between three distinct concepts that can be inferre
 The annotation panel can be opened by clicking on the ANNOTATION button in the annotation interface. It is possible to select one or more annotation types; then, all the annotations will be displayed and it is possible to view, edit and remove the desired annotations.
 
 ## Collaboration
-## Vertical toolbar functionalities
