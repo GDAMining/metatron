@@ -12,10 +12,31 @@ Clone or donwload this repository. Open the **metatron** folder and, replace the
 
 Run a new terminal session and run ```docker-compose up```. This procedure will take some minutes depending on your hardware and you internet connection. When the procedure is finished you can open a new browser winodw (chrome is recommended) and you can start uploading new documents.
 
-## Customizability
+## Customizability and Collections
+MetaTron allows the users to create one or more  _collections_: a collection contains one or more documents which can be annotated by one or more users. To create a new collection go to COLLECTIONS button at the top of the main interface which will redirect to the collections page. This page contains the list of collections a user can annotate and a form to create a new collection. 
 
-## Annotation
-### Mention-level
+The collections a user can annotate contain the following information: creator, date of creation, descriptions, documents, number of annotators, annotators' names, labels list. It is possible to interact with the collections, in particular it is possible to:
+1. load more information;
+2. have an overview of the documents of the collection and the related annotations;
+3. annotate the collection;
+4. delete the collection (for the creator only)
+
+<p align="center">
+   <img src="./img/8.png" alt="logo" width="900px"/>
+</p>
+
+The documents page contains a table where each document is a row of the table. For each document it is possible to keep track of the annotation of each type. Users can see other annotators' annotations and download the related annotations.
+
+<p align="center">
+   <img src="./img/13.jpg" alt="logo" width="900px"/>
+</p>
+
+To create a new collection, click on ADD COLLECTION to open the form. To create a new collection the following information should be provided: (i) name, (ii) description, (iii) a list of members who can annotate the collection; (iv) a file containing the concepts that can be linked to the mentions or added in relationships and assertions; (v) one or more textual documents: documents can be uploaded in JSON, CSV, PDF, TXT; it is possible to annotate pubmed abstracts by providing a list of PMIDs, abstract from semantics scholar and openaire by providing a list of DOIs. In this case, the integration with external rest apis allows to automatically get the abstracts; (vi) a list of labels that can be used to classify the documents. Labels, members and documents can be updated at any time.
+When a new member is added, it will not be automatically able to annotate the collection: an invitation is sent to them, and then, once that they accept the invitation, they will be able to annotate the documents.
+
+
+## Annotations and Annotation Interface
+### Mention-level annotations
 MetaTron provides three types of mention-level annotation. Mention-level annotations concern specific text-spans inside the document's textual content, hence, they do not consider the entire document. Mention-level annotations are: (i) mentions annotation, (ii) concepts linking, and (iii) relationship annotation.
 
 **Mentions annotation**
@@ -25,6 +46,7 @@ Mentions are text-spans in a textual document which can be linked to an entity i
 2. If the mention includes two or more words, just click on the first and last words and the sequence of adjacent words will be automatically annotated;
 3. If the mention is a substring of one or more words (hence it is not comprised within two white spaces), drag and drop from the first to the last character you want to annotate
 
+MetaTron supports overlapping mentions.
 When a mention is selected, it will be highlighted in blue color.
 
 **The mention panel**
@@ -49,18 +71,34 @@ To associate a new concept to a mention, right-click on the mention and select t
    <img src="./img/panel.jpg" alt="logo" width="700px"/>
 </p>
 
-
-
 **Relationship annotation**
 A relationship is composed of three main elements: a subject, a predicate, and an object. At least one of these three elements must be a mention; the other two elements can be concepts unlinked to any mention. à
 
 To annotate a new relationship, start selecting the mention that will be part of your mention, once selected the mention it will be the subject of the relationship by default; you can change the role of the mention by right clicking on it: a drop down menu will appear and you can select one between subject, predicate and object. To annotate other mentions that take part in the relationship, just click on them and change the role (if needed). To add new concepts to the relationship, the menu on the right allows to open the concepts modal (the same used in the concepts linking) where it is possible to select the desired concept. 
 
+<p align="center">
+   <img src="./img/rel.jpg" alt="logo" width="800px"/>
+</p>
+<p align="center">
+   <img src="./img/3.jpg" alt="logo" width="800px"/>
+</p>
+
+### Document-level annotations
+Document-level annotation concern the entire document content and are not tied to a specific text span. Document-level annotations are: (i) labels annotation; (ii) assertions annotations.
+ 
+ **Labels annotation**
+ Labels are categories used to classify a textual document. To add, edit, remove a label, open the annotation panel by clicking on the ANNOTATION button in the annotation interface and select the label option from the drop-down list. Once that the menu on the right opens up, you can click on the desired labels to select or deselect them. Your selection is automatically saved.
+ 
+
+<p align="center">
+   <img src="./img/5.jpg" alt="logo" width="600px"/>
+</p>
+
+ **Assertions annotation**
+Assertions are relationships between three distinct concepts that can be inferred from the document content. Concepts are not tied to any mention. To select a new assertion click on the button "+ ASSERTION". A panel on the right will open with the possibility to select the concepts composing the assertion.
+
+### The annotation panel
+The annotation panel can be opened by clicking on the ANNOTATION button in the annotation interface. It is possible to select one or more annotation types; then, all the annotations will be displayed and it is possible to view, edit and remove the desired annotations.
 
 ## Collaboration
-The main functionalities of MetaTron are the listed below, in particular it supports:
-
-  - three mention-level and two document-level annotations types
-  - support for click-away mention annotation 
-  - support for drag and drop mention annotation
-  -  
+## Vertical toolbar functionalities
