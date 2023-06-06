@@ -1,6 +1,7 @@
 # MetaTron version 1.0.0
-![logo.png](./img/logo.png)
-
+<p align="center">
+   <img src="./img/logo_1.png" alt="logo" />
+</p>
 MetaTron is an open-source, collaborative, web-based annotation targeting the biomedical domain. 
 All the source code, the installation guidelines, and instructions to use the tool are availanle in this repository.
 
@@ -10,6 +11,8 @@ MetaTron is available online at http://metatron.dei.unipd.it. In order to locall
 Clone or donwload this repository. Open the **metatron** folder and, replace the url provided in the url.txt file with the url of the server where MetaTron will be deployed. Your url must replace the default one: http://0.0.0.0:8000. 
 
 Run a new terminal session and run ```docker-compose up```. This procedure will take some minutes depending on your hardware and you internet connection. When the procedure is finished you can open a new browser winodw (chrome is recommended) and you can start uploading new documents.
+
+## Customizability
 
 ## Annotation
 ### Mention-level
@@ -37,10 +40,16 @@ When a new mention is selected, it is possible to open a mention panel by right-
 **Concepts linking**
 It is possible to link a concept to a mention. Concepts are named entitied belonging to an ontology. 
 
-To associate a new concept to a mention, right-click on the mention and select the option ```Add concept```: a new modal will appear and you are asked to provide the following information: concept type -- i.e., a macro area the concept belongs to, such as _gene _or _disease_; the concept name which is the name of the concept, and the concept ID (necessary only if there is more than one concept with that name)
+To associate a new concept to a mention, right-click on the mention and select the option ```Add concept```: a new modal will appear and you are asked to provide the following information: concept type -- i.e., a macro area the concept belongs to, such as _gene _or _disease_; the concept name which is the name of the concept, and the concept ID (necessary only if there is more than one concept with that name). The concepts you can choose from belong to a list of concepts added at the moment of the collection creation. If the concept you are looking for is not in the list, it is possible to add it by providing the following information: area, name, ID, description (this is optional).  
 
-## Customizability
-## Collections and collaboration
+![panel.png](./img/concepts.png)
+
+**Relationship annotation**
+A relationship is composed of three main elements: a subject, a predicate, and an object. At least one of these three elements must be a mention; the other two elements can be concepts unlinked to any mention. à
+
+To annotate a new relationship, start selecting the mention that will be part of your mention, once selected the mention it will be the subject of the relationship by default; you can change the role of the mention by right clicking on it: a drop down menu will appear and you can select one between subject, predicate and object. To annotate other mentions that take part in the relationship, just click on them and change the role (if needed). To add new concepts to the relationship, click 
+
+## Collaboration
 The main functionalities of MetaTron are the listed below, in particular it supports:
 
   - three mention-level and two document-level annotations types
