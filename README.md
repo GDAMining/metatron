@@ -117,9 +117,31 @@ Assertions are relationships between three distinct concepts that can be inferre
 ## AutoTron and the Automatic Annotation
 It is possible to automatically annotate the documents relying on AutoTron which provides built-in predictions for assertion and relationship annotation. Two tasks have been implemented: _GCA - Gene Cancer Association_ and _GDA - Gene Disease Association_. AutoTron will automatically annotate mentions, link concepts, and relationships (or assertions).
 
-
+<p align="center">
+   <img src="./img/autotron2.jpg" alt="logo" width="500px"/>
+</p>
 
 ### The annotation panel
 The annotation panel can be opened by clicking on the ANNOTATION button in the annotation interface. It is possible to select one or more annotation types; then, all the annotations will be displayed and it is possible to view, edit and remove the desired annotations.
 
 ## Collaboration
+Users can collaboratively annotate the documents of a collection. Specifically, from the vertical toolbar it is possible to access to the annotations of other different users, as well as the annotation with the highest value of majority voting. Users can copy some (as well as all) the annotations of the teammates. 
+
+The statistics web page allows users to keep track of the annotations performed in the collection. In particular it is possible to check _personal_ and _global_ statistics. Personal statistics concern the user, while global statistics concern all the annotators. It is possible to check the statistics of one document or of the entire collection. 
+
+Below an example of global statistics concerning the entire collection.
+<p align="center">
+   <img src="./img/10.jpg" alt="logo" width="500px"/>
+</p>
+
+In (A) an overview is provided: for each annotation type the total number of annotations is displayed, as well as the number of documents and the number of annotators. The agreement is based on fleiss' kappa. In (B), for each concept type it is provided the related list of concepts and how many times have been linked to a mention. The same has been done in (C): in this case we considered for each concept, how many times has been annotated as subject, predicate, object respectively.
+
+<p align="center">
+   <img src="./img/11.jpg" alt="logo" width="500px"/>
+</p>
+In (D) for each document, it is provided the number of annotations subdivided into annotation types; in (E) the number of annotators for each document is provided.
+
+<p align="center">
+   <img src="./img/12.jpg" alt="logo" width="500px"/>
+</p>
+The pie charts allows users to check how concepts types are distributed. Global considers all the annotations involving concepts and shows for each concept type how many times has been annotated; subject, predicate and object instead, refer only to relationships and assertions.
