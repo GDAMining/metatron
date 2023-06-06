@@ -1,5 +1,5 @@
 # MetaTron version 1.0.0
-![logo.png](./metatron img/logo.png)
+![logo.png](./img/logo.png)
 
 MetaTron is an open-source, collaborative, web-based annotation targeting the biomedical domain. 
 All the source code, the installation guidelines, and instructions to use the tool are availanle in this repository.
@@ -32,12 +32,12 @@ When a new mention is selected, it is possible to open a mention panel by right-
 3. Link a new concept;
 4. Add a relationship;
 
-![panel.png](./metatron img/2jpg)
+![panel.png](./img/2.jpg)
 
 **Concepts linking**
 It is possible to link a concept to a mention. Concepts are named entitied belonging to an ontology. 
 
-To associate a new concept to a mention, right-click on the mention and select the option 
+To associate a new concept to a mention, right-click on the mention and select the option ```Add concept```: a new modal will appear and you are asked to provide the following information: concept type -- i.e., a macro area the concept belongs to, such as _gene _or _disease_; the concept name which is the name of the concept, and the concept ID (necessary only if there is more than one concept with that name)
 
 ## Customizability
 ## Collections and collaboration
