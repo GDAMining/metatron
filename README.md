@@ -34,20 +34,28 @@ When a new mention is selected, it is possible to open a mention panel by right-
 2. Receive some suggestions about the concepts that can be associated to the mention;
 3. Link a new concept;
 4. Add a relationship;
+5. Delete the mention.
 
-![panel.png](./img/2.jpg)
+<p align="center">
+   <img src="./img/2.jpg" alt="logo" width="700px"/>
+</p>
+
 
 **Concepts linking**
 It is possible to link a concept to a mention. Concepts are named entitied belonging to an ontology. 
 
 To associate a new concept to a mention, right-click on the mention and select the option ```Add concept```: a new modal will appear and you are asked to provide the following information: concept type -- i.e., a macro area the concept belongs to, such as _gene _or _disease_; the concept name which is the name of the concept, and the concept ID (necessary only if there is more than one concept with that name). The concepts you can choose from belong to a list of concepts added at the moment of the collection creation. If the concept you are looking for is not in the list, it is possible to add it by providing the following information: area, name, ID, description (this is optional).  
+<p align="center">
+   <img src="./img/panel.jpg" alt="logo" width="700px"/>
+</p>
 
-![panel.png](./img/concepts.png)
+
 
 **Relationship annotation**
 A relationship is composed of three main elements: a subject, a predicate, and an object. At least one of these three elements must be a mention; the other two elements can be concepts unlinked to any mention. à
 
-To annotate a new relationship, start selecting the mention that will be part of your mention, once selected the mention it will be the subject of the relationship by default; you can change the role of the mention by right clicking on it: a drop down menu will appear and you can select one between subject, predicate and object. To annotate other mentions that take part in the relationship, just click on them and change the role (if needed). To add new concepts to the relationship, click 
+To annotate a new relationship, start selecting the mention that will be part of your mention, once selected the mention it will be the subject of the relationship by default; you can change the role of the mention by right clicking on it: a drop down menu will appear and you can select one between subject, predicate and object. To annotate other mentions that take part in the relationship, just click on them and change the role (if needed). To add new concepts to the relationship, the menu on the right allows to open the concepts modal (the same used in the concepts linking) where it is possible to select the desired concept. 
+
 
 ## Collaboration
 The main functionalities of MetaTron are the listed below, in particular it supports:
