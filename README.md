@@ -5,7 +5,7 @@
 MetaTron is an open-source, collaborative, web-based annotation targeting the biomedical domain. 
 All the source code, the installation guidelines, and instructions to use the tool are availanle in this repository.
 
-The instructions on how to perform annotations and an overview of the features that metatron provides is available at: https://metatron.dei.unipd.it/demo
+A set of videos illustrating the instructions on how to perform annotations and an overview of the features that MetaTron provides is available at: https://metatron.dei.unipd.it/demo
 ## Requirements
 MetaTron is available online at http://metatron.dei.unipd.it. In order to locally deploy MetaTron in your computer or in a remote server you need Docker and docker-compose. To install them, you can follow the instructions available at: https://docs.docker.com/get-docker/ (Docker) and https://docs.docker.com/compose/install/ (docker-compose). 
 
