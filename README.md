@@ -146,3 +146,41 @@ In (D) for each document, it is provided the number of annotations subdivided in
    <img src="./img/12.jpg" alt="logo" width="500px"/>
 </p>
 The pie charts allows users to check how concepts types are distributed. Global considers all the annotations involving concepts and shows for each concept type how many times has been annotated; subject, predicate and object instead, refer only to relationships and assertions.
+
+# Citation
+If you use MedTAG for your research work, please consider citing our paper:
+
+  ```bibtex
+@inproceedings{irrera_etal-2024,
+  author       = {Ornella Irrera and Stefano Marchesin and Gianmaria Silvello},
+  title        = {MetaTron: advancing biomedical annotation empowering relation annotation
+                  and collaboration},
+  journal      = {{BMC} Bioinformatics},
+  volume       = {25},
+  number       = {1},
+  pages        = {112},
+  year         = {2024},
+  url          = {https://doi.org/10.1186/s12859-024-05730-9},
+  doi          = {10.1186/S12859-024-05730-9}
+}
+```
+
+# Credits
+
+MetaTron has been developed by the [Intelligent Interactive Information Access Hub (IIIA)](http://iiia.dei.unipd.it/) of the  [Department of Information Engineering](https://www.dei.unipd.it/en/), [University of Padua](https://www.unipd.it/en/), Italy.
+
+![](./img/logo/merge_logo_580x130.png)
+
+## Acknowledgements 
+
+<img src="./img/logo/hereditary.png" width="300"/>
+
+This work was supported by [HEREDITARY](https://www.hereditary.eu/), European Union Horizon 2020 program under Grant Agreement no. 101137074.
+
+## Contacts
+
+Any questions? The authors are glad to answer your questions and receive your feedback or suggestions to further improve MedTAG. 
+
+- [Ornella Irrera](http://www.dei.unipd.it/~irreraorne) · ornella.irrera AT unipd.it
+- [Stefano Marchesin](https://www.dei.unipd.it/~marches1/) · stefano.marchesin AT unipd.it
+- [Gianmaria Silvello](http://www.dei.unipd.it/~silvello/) · gianmaria.silvello AT unipd.it
