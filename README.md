@@ -179,7 +179,7 @@ This work was supported by [HEREDITARY](https://www.hereditary.eu/), European Un
 
 ## Contacts
 
-Any questions? The authors are glad to answer your questions and receive your feedback or suggestions to further improve MedTAG. 
+Any questions? The authors are glad to answer your questions and receive your feedback or suggestions to further improve MetaTron. 
 
 - [Ornella Irrera](http://www.dei.unipd.it/~irreraorne) · ornella.irrera AT unipd.it
 - [Stefano Marchesin](https://www.dei.unipd.it/~marches1/) · stefano.marchesin AT unipd.it
