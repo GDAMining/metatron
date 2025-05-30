@@ -148,7 +148,7 @@ In (D) for each document, it is provided the number of annotations subdivided in
 The pie charts allows users to check how concepts types are distributed. Global considers all the annotations involving concepts and shows for each concept type how many times has been annotated; subject, predicate and object instead, refer only to relationships and assertions.
 
 # Citation
-If you use MedTAG for your research work, please consider citing our paper:
+If you use MetaTron for your research work, please consider citing our paper:
 
   ```bibtex
 @inproceedings{irrera_etal-2024,
